@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SwiftUIPractice
+
+  Created by lizhu on 2020/4/11.
+  Copyright © 2020 lizhu. All rights reserved.
+*/
+//中文资源里
+"Welcome" = "欢迎来到SWiftUI实战";

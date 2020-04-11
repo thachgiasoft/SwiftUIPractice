@@ -103,6 +103,7 @@
 		ACF141102441A85B00643A57 /* 6ec3b446gy1gavd523embj20j60pytd6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF140BD2441A85B00643A57 /* 6ec3b446gy1gavd523embj20j60pytd6.jpg */; };
 		ACF141112441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF140BE2441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg */; };
 		ACF141132441AC8800643A57 /* PostVipBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF141122441AC8800643A57 /* PostVipBadge.swift */; };
+		ACF141172441B4FB00643A57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACF141192441B4FB00643A57 /* Localizable.strings */; };
 		EEBC064DA0D892FDBAD2A169 /* Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95578B81055218F217AA4E23 /* Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +232,9 @@
 		ACF140BD2441A85B00643A57 /* 6ec3b446gy1gavd523embj20j60pytd6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6ec3b446gy1gavd523embj20j60pytd6.jpg; sourceTree = "<group>"; };
 		ACF140BE2441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005tnxzUly8gab4i2r73xj30u00u0js8.jpg; sourceTree = "<group>"; };
 		ACF141122441AC8800643A57 /* PostVipBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVipBadge.swift; sourceTree = "<group>"; };
+		ACF141182441B4FB00643A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ACF1411A2441B55800643A57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ACF1411B2441B55900643A57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D17A2E6DB08B1353A20845FA /* Pods-SwiftUIPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPractice.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPractice/Pods-SwiftUIPractice.release.xcconfig"; sourceTree = "<group>"; };
 		FF0CE5B01A268BAE3D6BD303 /* Pods_SwiftUIPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -350,6 +354,7 @@
 		ACF1406B2441A85B00643A57 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACF141142441B4C700643A57 /* Localizable */,
 				ACF1406C2441A85B00643A57 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg */,
 				ACF1406D2441A85B00643A57 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg */,
 				ACF1406E2441A85B00643A57 /* 6ec3b446jw1e8qgp5bmzyj2050050aa8.jpg */,
@@ -435,6 +440,14 @@
 				ACF140BE2441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACF141142441B4C700643A57 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				ACF141192441B4FB00643A57 /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		C847BA5A99A6B37F7C2448D3 /* Pods */ = {
@@ -542,6 +555,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = ACD17BAC24418C5900B27242;
 			productRefGroup = ACD17BB624418C5900B27242 /* Products */;
@@ -582,6 +596,7 @@
 				ACF140E42441A85B00643A57 /* bca7fdafly1gax1gqdnboj20c80atmxp.jpg in Resources */,
 				ACF140F82441A85B00643A57 /* 006PdkDogy1gap6ngiyn3j30u011idle.jpg in Resources */,
 				ACF140D62441A85B00643A57 /* bca7fdafgw1ekhkps65b1j2050050dg4.jpg in Resources */,
+				ACF141172441B4FB00643A57 /* Localizable.strings in Resources */,
 				ACF140C92441A85B00643A57 /* 8a0b5544gy1gauy2flua6j20u00hitab.jpg in Resources */,
 				ACF141112441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg in Resources */,
 				ACF140EB2441A85B00643A57 /* c5aa834fly8g97m8ix9lcj20re0regnk.jpg in Resources */,
@@ -837,8 +852,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				ACD17BC424418C5E00B27242 /* Base */,
+				ACF1411A2441B55800643A57 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ACF141192441B4FB00643A57 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACF141182441B4FB00643A57 /* en */,
+				ACF1411B2441B55900643A57 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -848,6 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -908,6 +934,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -970,6 +997,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUIPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -993,6 +1021,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUIPractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
