@@ -10,7 +10,17 @@ import SwiftUI
 
 struct PostCell: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 5) {
+            Image(uiImage: R.image.a0b5544gy1gauy2ex786j20u0129aedJpg()!)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 50, height: 50)
+                .clipShape(Circle())
+                .overlay(
+                    PostVipBadge()
+                        .offset(x: 16, y: 16)
+            )
+            
             VStack(alignment: .leading) {
                 Text("用户昵称")
                     .font(.system(size: 16))
@@ -20,6 +30,7 @@ struct PostCell: View {
                     .font(.system(size: 11))
                     .foregroundColor(.gray)
             }
+            .padding(.leading,10)
             
             Spacer()
             
