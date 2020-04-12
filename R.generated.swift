@@ -1519,12 +1519,12 @@ struct R: Rswift.Validatable {
 
     /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
     struct localizable {
-      /// en translation: Welcome to hangge.com
+      /// en translation: Welcome to SWiftUIPractice
       ///
       /// Locales: en, zh-Hans
       static let welcome = Rswift.StringResource(key: "Welcome", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans"], comment: nil)
 
-      /// en translation: Welcome to hangge.com
+      /// en translation: Welcome to SWiftUIPractice
       ///
       /// Locales: en, zh-Hans
       static func welcome(preferredLanguages: [String]? = nil) -> String {

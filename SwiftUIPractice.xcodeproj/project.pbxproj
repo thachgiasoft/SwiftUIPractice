@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32890E4F060BADD11F0658E5 /* Pods_SwiftUIPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0CE5B01A268BAE3D6BD303 /* Pods_SwiftUIPractice.framework */; };
 		961757ABCF3715B1C83F5026 /* Pods_SwiftUIPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686F7382810EBAFDFD9861A /* Pods_SwiftUIPracticeTests.framework */; };
+		AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F592B2442CC4E00CE301E /* OC2Swift.swift */; };
 		ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BB824418C5900B27242 /* AppDelegate.swift */; };
 		ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBA24418C5900B27242 /* SceneDelegate.swift */; };
 		ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBC24418C5900B27242 /* ContentView.swift */; };
@@ -132,6 +133,7 @@
 		95578B81055218F217AA4E23 /* Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B36400AFBCEF9B2C989AC5 /* Pods-SwiftUIPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPractice.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIPractice/Pods-SwiftUIPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		998C93BD5EEBAFFF843A151A /* Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPractice-SwiftUIPracticeUITests/Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC1F592B2442CC4E00CE301E /* OC2Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC2Swift.swift; sourceTree = "<group>"; };
 		ACD17BB524418C5900B27242 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD17BB824418C5900B27242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD17BBA24418C5900B27242 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +279,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC1F592A2442CC3300CE301E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AC1F592B2442CC4E00CE301E /* OC2Swift.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		ACD17BAC24418C5900B27242 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +312,7 @@
 		ACD17BB724418C5900B27242 /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				AC1F592A2442CC3300CE301E /* Tests */,
 				ACF140692441A81400643A57 /* R.generated.swift */,
 				ACF1406B2441A85B00643A57 /* Resources */,
 				ACD17BE82441903F00B27242 /* Views */,
@@ -354,7 +365,33 @@
 		ACF1406B2441A85B00643A57 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACF1411C24427BFC00643A57 /* Post */,
 				ACF141142441B4C700643A57 /* Localizable */,
+				ACF140842441A85B00643A57 /* PostListData_recommend_1.json */,
+				ACF140A72441A85B00643A57 /* PostListData_hot_1.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACF141142441B4C700643A57 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				ACF141192441B4FB00643A57 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		ACF1411C24427BFC00643A57 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1411D24427C0700643A57 /* Images */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		ACF1411D24427C0700643A57 /* Images */ = {
+			isa = PBXGroup;
+			children = (
 				ACF1406C2441A85B00643A57 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg */,
 				ACF1406D2441A85B00643A57 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg */,
 				ACF1406E2441A85B00643A57 /* 6ec3b446jw1e8qgp5bmzyj2050050aa8.jpg */,
@@ -379,7 +416,6 @@
 				ACF140812441A85B00643A57 /* 76297935ly1gatz89dzblj23402c0qv6.jpg */,
 				ACF140822441A85B00643A57 /* 700a34f6gy1gaunswy5qnj20j60pkadk.jpg */,
 				ACF140832441A85B00643A57 /* bca7fdafgw1ekhkps65b1j2050050dg4.jpg */,
-				ACF140842441A85B00643A57 /* PostListData_recommend_1.json */,
 				ACF140852441A85B00643A57 /* 006gWxMEly8g0bjpl3ynij30kv0kv773.jpg */,
 				ACF140862441A85B00643A57 /* 6ec3b446gy1gavd51jc4lj20j60pmwhl.jpg */,
 				ACF140872441A85B00643A57 /* 006gWxMEly1gavap88gttj30hs0a0dgf.jpg */,
@@ -414,7 +450,6 @@
 				ACF140A42441A85B00643A57 /* c5aa834fgy1gauzr95r6fj20tw0l3dq4.jpg */,
 				ACF140A52441A85B00643A57 /* 006PdkDogy1gap6ngiyn3j30u011idle.jpg */,
 				ACF140A62441A85B00643A57 /* d0c21786ly1gavj2btv6tj20c80790tg.jpg */,
-				ACF140A72441A85B00643A57 /* PostListData_hot_1.json */,
 				ACF140A82441A85B00643A57 /* eb5c94aely8fmvumnl9baj20v90v9q49.jpg */,
 				ACF140A92441A85B00643A57 /* 630584a6ly8fqs5wwkkmrj20ku0kuta7.jpg */,
 				ACF140AA2441A85B00643A57 /* d0c21786ly1gavj2cowp9j20c8083ab4.jpg */,
@@ -439,15 +474,7 @@
 				ACF140BD2441A85B00643A57 /* 6ec3b446gy1gavd523embj20j60pytd6.jpg */,
 				ACF140BE2441A85B00643A57 /* 005tnxzUly8gab4i2r73xj30u00u0js8.jpg */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		ACF141142441B4C700643A57 /* Localizable */ = {
-			isa = PBXGroup;
-			children = (
-				ACF141192441B4FB00643A57 /* Localizable.strings */,
-			);
-			path = Localizable;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		C847BA5A99A6B37F7C2448D3 /* Pods */ = {
@@ -808,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */,
+				AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,
