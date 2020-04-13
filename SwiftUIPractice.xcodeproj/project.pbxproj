@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		32890E4F060BADD11F0658E5 /* Pods_SwiftUIPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0CE5B01A268BAE3D6BD303 /* Pods_SwiftUIPractice.framework */; };
 		961757ABCF3715B1C83F5026 /* Pods_SwiftUIPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4686F7382810EBAFDFD9861A /* Pods_SwiftUIPracticeTests.framework */; };
+		AC12671D2444762E00CEAC73 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12671C2444762E00CEAC73 /* CalculatorButtonItem.swift */; };
+		AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12671E2444A02C00CEAC73 /* CalculatorButtonRow.swift */; };
+		AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1267202444A05000CEAC73 /* CalculatorButton.swift */; };
+		AC1267232444A56800CEAC73 /* CalculatorButtonPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1267222444A56800CEAC73 /* CalculatorButtonPad.swift */; };
+		AC1267272444A7D900CEAC73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1267262444A7D900CEAC73 /* Post.swift */; };
+		AC1563D824442ED500644DFA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1563D724442ED500644DFA /* SwiftUIView.swift */; };
 		AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F592B2442CC4E00CE301E /* OC2Swift.swift */; };
 		ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BB824418C5900B27242 /* AppDelegate.swift */; };
 		ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBA24418C5900B27242 /* SceneDelegate.swift */; };
@@ -133,6 +139,12 @@
 		95578B81055218F217AA4E23 /* Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPractice_SwiftUIPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B36400AFBCEF9B2C989AC5 /* Pods-SwiftUIPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPractice.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIPractice/Pods-SwiftUIPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		998C93BD5EEBAFFF843A151A /* Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPractice-SwiftUIPracticeUITests/Pods-SwiftUIPractice-SwiftUIPracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC12671C2444762E00CEAC73 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
+		AC12671E2444A02C00CEAC73 /* CalculatorButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonRow.swift; sourceTree = "<group>"; };
+		AC1267202444A05000CEAC73 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		AC1267222444A56800CEAC73 /* CalculatorButtonPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonPad.swift; sourceTree = "<group>"; };
+		AC1267262444A7D900CEAC73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AC1563D724442ED500644DFA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		AC1F592B2442CC4E00CE301E /* OC2Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC2Swift.swift; sourceTree = "<group>"; };
 		ACD17BB524418C5900B27242 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD17BB824418C5900B27242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +291,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC12671B2444761F00CEAC73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC12671C2444762E00CEAC73 /* CalculatorButtonItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC1267242444A7BA00CEAC73 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				AC1267252444A7C900CEAC73 /* Models */,
+				ACD17BE82441903F00B27242 /* Views */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		AC1267252444A7C900CEAC73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC1267262444A7D900CEAC73 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC1563D524442E0C00644DFA /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				AC12671B2444761F00CEAC73 /* Models */,
+				AC1563D624442E1100644DFA /* Views */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		AC1563D624442E1100644DFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC1563D724442ED500644DFA /* SwiftUIView.swift */,
+				AC1267202444A05000CEAC73 /* CalculatorButton.swift */,
+				AC12671E2444A02C00CEAC73 /* CalculatorButtonRow.swift */,
+				AC1267222444A56800CEAC73 /* CalculatorButtonPad.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AC1F592A2442CC3300CE301E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,10 +369,11 @@
 		ACD17BB724418C5900B27242 /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				AC1267242444A7BA00CEAC73 /* Post */,
+				AC1563D524442E0C00644DFA /* Calculator */,
 				AC1F592A2442CC3300CE301E /* Tests */,
 				ACF140692441A81400643A57 /* R.generated.swift */,
 				ACF1406B2441A85B00643A57 /* Resources */,
-				ACD17BE82441903F00B27242 /* Views */,
 				ACD17BB824418C5900B27242 /* AppDelegate.swift */,
 				ACD17BBA24418C5900B27242 /* SceneDelegate.swift */,
 				ACD17BBC24418C5900B27242 /* ContentView.swift */,
@@ -836,11 +894,17 @@
 			files = (
 				ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */,
 				AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */,
+				AC1563D824442ED500644DFA /* SwiftUIView.swift in Sources */,
+				AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */,
+				AC1267272444A7D900CEAC73 /* Post.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
+				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,
 				ACD17BEA2441905B00B27242 /* PostCell.swift in Sources */,
 				ACF141132441AC8800643A57 /* PostVipBadge.swift in Sources */,
+				AC12671D2444762E00CEAC73 /* CalculatorButtonItem.swift in Sources */,
+				AC1267232444A56800CEAC73 /* CalculatorButtonPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

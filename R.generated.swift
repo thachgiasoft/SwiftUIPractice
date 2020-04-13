@@ -105,6 +105,56 @@ struct R: Rswift.Validatable {
   }
   #endif
 
+  /// This `R.color` struct is generated, and contains static references to 4 colors.
+  struct color {
+    /// Color `commandBackground`.
+    static let commandBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "commandBackground")
+    /// Color `digitBackground`.
+    static let digitBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "digitBackground")
+    /// Color `operatorBackground`.
+    static let operatorBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "operatorBackground")
+    /// Color `testColor`.
+    static let testColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "testColor")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "commandBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func commandBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.commandBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "digitBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func digitBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.digitBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "operatorBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func operatorBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.operatorBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "testColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func testColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.testColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.file` struct is generated, and contains static references to 83 files.
   struct file {
     /// Resource file `005tnxzUly8gab4i2r73xj30u00u0js8.jpg`.
