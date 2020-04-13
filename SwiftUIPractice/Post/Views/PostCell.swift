@@ -9,50 +9,53 @@
 import SwiftUI
 
 struct PostCell: View {
+    let post: Post
+    
     var body: some View {
         HStack(spacing: 5) {
-            Image(uiImage: R.image.a0b5544gy1gauy2ex786j20u0129aedJpg()!)
+            post.avatarImage
                 .resizable()
                 .scaledToFill()
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
                 .overlay(
-                    PostVipBadge()
+                    PostVipBadge(vip: true)
                         .offset(x: 16, y: 16)
             )
             
             VStack(alignment: .leading) {
-                Text("用户昵称")
+                Text(post.name)
                     .font(.system(size: 16))
                     .foregroundColor(.red)
                     .lineLimit(1)
-                Text("2020-04-11 13:50")
+                Text(post.date)
                     .font(.system(size: 11))
                     .foregroundColor(.gray)
             }
             .padding(.leading,10)
             
-            Spacer()
-            
-            Button(action: {
-                print("click follow button")
-            }) {
-                Text("关注")
-                    .font(.system(size: 14))
-                    .foregroundColor(.orange)
-                .frame(width: 50, height: 26)//增大点击区域及圆角
-                .overlay(
-                    RoundedRectangle(cornerRadius: 13)
-                        .stroke(Color.orange, lineWidth: 1)
-                )
+            if !post.isFollowed {
+                Spacer()
+                
+                Button(action: {
+                    print("click follow button")
+                }) {
+                    Text("关注")
+                        .font(.system(size: 14))
+                        .foregroundColor(.orange)
+                    .frame(width: 50, height: 26)//增大点击区域及圆角
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 13)
+                            .stroke(Color.orange, lineWidth: 1)
+                    )
+                }
             }
-            
         }
     }
 }
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell()
+        PostCell(post: loadPostListData("PostListData_recommend_1.json").list[1])
     }
 }

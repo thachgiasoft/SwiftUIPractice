@@ -3,6 +3,12 @@
 
 # Swift
 
+## 数据转模型
+
+ JSON解析及格式化验证：https://www.json.cn/
+
+ JSON 2 swift：[http://www.jsoncafe.com](http://www.jsoncafe.com/)
+
 ## 国际化与本地化
 
 ### 本地化字符串
@@ -80,6 +86,73 @@ Get strong typed, autocompleted resources like images, fonts and segues in Swift
 ## Image
 
 1. 自定义Image这个标签的大小，必须先设置resizable()才能设置frame(width: 50, height: 50)，否则失效。
+
+## 预览多尺寸以及适配
+
+```swift
+struct SwiftUIView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            SwiftUIView()
+            SwiftUIView().previewDevice("iPhone SE")
+        }
+    }
+}
+```
+
+1. 如果设计的界面是基于414宽度的，那么可以适配如下：
+
+   ```swift
+   let scale: CGFloat = UIScreen.main.bounds.width / 414
+   ```
+
+   
+
+2. 将VStack按照scaleEffect的scale缩放
+
+   ```swift
+   var body: some View {
+           VStack(spacing: 12) {
+               Spacer()
+               Text("0")
+                   .font(.system(size: 76))
+                   .minimumScaleFactor(0.5)
+                   .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                   .lineLimit(1)
+               CalculatorButtonPad().padding(.bottom)
+           }.scaleEffect(scale)
+   ```
+
+3. 整体使用 scaleEffect 进行缩放，会在布局时带来困难，因为它只是对视觉上进行了 缩放，而布局还是依照原有的尺寸进行。相对于整体的 scale 操作，可能对单个具体 元素的 frame 进行缩放效果会好一些 。
+
+## Modifier顺序的影响
+
+view modifier分为两种：
+
+1. 像是font、backgroundColor这样定义具体类型上，然后返回同样类型的原地modifer。
+2. 像是padding、background这样定义在extension中，将原来的view进行包装并返回新的view的封装类modifier。
+
+原地modifier一般来说对顺序不敏感，对布局也不关心，它们更像是针对对象view本身对属性修改。封装类的modifer的顺序十分重要。
+
+## 验证Dart Mode
+
+1. 在模拟器中运行app，Xcode11通过运行时调试工具栏上的"Enviroment Overides"工具来在颜色模式之间进行切换。
+
+2. 在SwiftUI预览中添加enviroment。
+
+   ```swift
+   struct SwiftUIView_Previews: PreviewProvider {
+       static var previews: some View {
+           Group {
+               SwiftUIView()
+               SwiftUIView().previewDevice("iPhone SE").environment(\.colorScheme, .dark)
+           }
+       }
+   }
+   
+   ```
+
+   
 
 ## 小技巧
 

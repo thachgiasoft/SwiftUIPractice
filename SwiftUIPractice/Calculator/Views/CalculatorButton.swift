@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+let scale = UIScreen.main.bounds.width / 414
+
 struct CalculatorButton: View {
     let fontSize: CGFloat = 38
     let title: String
@@ -18,19 +20,21 @@ struct CalculatorButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: fontSize))
+                .font(.system(size: fontSize * scale))
                 .foregroundColor(.white)
-                .frame(width: size.width, height: size.height)
+                .frame(width: size.width * scale, height: size.height * scale)
                 //.padding()
                 .background(Color(backgroudColor))
-                .cornerRadius(size.width/2)
+                .cornerRadius(size.width * scale / 2)//方式1
+//                .clipShape(Circle())//方式2
+            
         }
     }
 }
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton(title: "+",size: CGSize(width: 88, height: 88), backgroudColor: R.color.operatorBackground()!) {
+        CalculatorButton(title: "+",size: CGSize(width: 88 * scale, height: 88 * scale), backgroudColor: R.color.operatorBackground()!) {
             print("click +")
         }
     }

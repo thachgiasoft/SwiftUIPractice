@@ -35,7 +35,7 @@ func testOC2Swift(){
     withUnsafePointer(to: &s) { o in
         print(o)
     }
-    print(UnsafeRawPointer(&s))
+//    print(UnsafeRawPointer(&s)) //-->withUnsafePointer
     
     //打印引用类型变量指向的内存地址
     let c = Class1()
