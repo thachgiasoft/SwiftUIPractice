@@ -101,6 +101,30 @@ ObservableObject 协议要求实现类型是 class，它只有一个需要实现
 
 1. 自定义Image这个标签的大小，必须先设置resizable()才能设置frame(width: 50, height: 50)，否则失效。
 
+## List
+
+1. 删除分割线及点击反馈
+
+   ```swift
+   init() {
+       UITableView.appearance().separatorStyle = .none
+       UITableViewCell.appearance().selectionStyle = .none
+   }
+   ```
+
+   
+
+2. cell中按钮响应事件其他部分的点击不响应
+
+   ```swift
+   Button(action: { }) {
+       Text("关注")
+   }
+   .buttonStyle(BorderlessButtonStyle())
+   ```
+
+   
+
 ## 预览多尺寸以及适配
 
 ```swift

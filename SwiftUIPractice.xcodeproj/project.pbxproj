@@ -20,6 +20,8 @@
 		AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F592B2442CC4E00CE301E /* OC2Swift.swift */; };
 		AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */; };
 		AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */; };
+		AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */; };
+		AC9CDD452445F60800128528 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD442445F60800128528 /* PostListView.swift */; };
 		ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BB824418C5900B27242 /* AppDelegate.swift */; };
 		ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBA24418C5900B27242 /* SceneDelegate.swift */; };
 		ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBC24418C5900B27242 /* ContentView.swift */; };
@@ -154,6 +156,8 @@
 		AC1F592B2442CC4E00CE301E /* OC2Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC2Swift.swift; sourceTree = "<group>"; };
 		AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPropertyWrapper.swift; sourceTree = "<group>"; };
+		AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
+		AC9CDD442445F60800128528 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		ACD17BB524418C5900B27242 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD17BB824418C5900B27242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD17BBA24418C5900B27242 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 			children = (
 				ACD17BE92441905B00B27242 /* PostCell.swift */,
 				ACF141122441AC8800643A57 /* PostVipBadge.swift */,
+				AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */,
+				AC9CDD442445F60800128528 /* PostListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -935,7 +941,9 @@
 				AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */,
 				AC1267272444A7D900CEAC73 /* Post.swift in Sources */,
 				AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */,
+				AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */,
 				AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */,
+				AC9CDD452445F60800128528 /* PostListView.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
 				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
