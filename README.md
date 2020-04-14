@@ -81,19 +81,64 @@ Get strong typed, autocompleted resources like images, fonts and segues in Swift
 
 # Combine
 
-## 数据流
+## 数据状态和绑定
 
-### State
+根据适用范围和存储 状态的复杂度的不同，需要选取合适的方案。@State 和 @Binding 提供 View 内部 的状态存储，它们应该是被标记为 private 的简单值类型，仅在内部使用。 ObservableObject 和 @ObservedObject 则针对跨越 View 层级的状态共享，它可以处理更复杂的数据类型，其引用类型的特点，也让我们需要在数据变化时通过某种 手段向外发送通知 (比如手动调用 objectWillChange.send() 或者使用 @Published)， 来触发界面刷新。对于 “跳跃式” 跨越多个 View 层级的状态，@EnvironmentObject 能让我们更方便地使用 ObservableObject，以达到简化代码的目的。 
+
+如果你纠结于选择使用哪种方式的话，从 ObservableObject 开始入手会是一个相对好的选择:如果发现状态可以被限制在同一个 View 层级中， 则改用 @State;如果发现状态需要大批量共享，则改用 @EnvironmentObject。 
+
+## @State
+
+通过使用 @State 修饰器我们可以关联出 View 的状态. SwiftUI 将会把使用过 @State 修饰器的属性存储到一个特殊的内存区域，并且这个区域和 View struct 是隔离的. 当 @State 装饰过的属性发生了变化，SwiftUI 会根据新的属性值重新创建视图。
 
 这个状态是属于单个 View 及其子层级，还是需要在平行的部件之间传递和使 用?@State 可以依靠 SwiftUI 框架完成 View 的自动订阅和刷新，但这是有 条件的:对于 @State 修饰的属性的访问，只能发生在 body 或者 body 所调 用的方法中。你不能在外部改变 @State 的值，它的所有相关操作和状态改变 都应该是和当前 View 挂钩的。如果你需要在多个 View 中共享数据，@State 可能不是很好的选择;如果还需要在 View 外部操作数据，那么 @State 甚至 就不是可选项了。 
 
-### Binding
+## @Binding
+
+有时候我们会把一个视图的属性传至子节点中，但是又不能直接的传递给子节点，因为在 Swift 中值的传递形式是`值类型`传递方式，也就是传递给子节点的是一个拷贝过的值。但是通过 @Binding 修饰器修饰后，属性变成了一个`引用类型`，传递变成了引用传递，这样父子视图的状态就能关联起来了。
 
 状态对应的数据结构是否足够简单?对于像是单个的Bool或者String， @State 可以迅速对应。含有少数几个成员变量的值类型，也许使用 @State 也还不错。但是对于更复杂的情况，例如含有很多属性和方法的类型，可能其 中只有很少几个属性需要触发 UI 更新，也可能各个属性之间彼此有关联，那 么我们应该选择引用类型和更灵活的可自定义方式。 
 
-### ObservableObject 和 ObservedObject 
+## @ObservedObject
+
+@ObservedObject 的用处和 @State 非常相似，从名字看来它是来修饰一个对象的，这个对象可以给多个独立的 View 使用。如果你用 @ObservedObject 来修饰一个对象，那么那个对象必须要实现 ObservableObject 协议，然后用 @Published 修饰对象里属性，表示这个属性是需要被 SwiftUI 监听的。
 
 ObservableObject 协议要求实现类型是 class，它只有一个需要实现的属性:objectWillChange。在数据将要发生改变时，这个属性用来向外进行 “广播”， 它的订阅者 (一般是 View 相关的逻辑) 在收到通知后，对 View 进行刷新。 
+
+```swift
+class CalculatorModel: ObservableObject {
+    var objectWillChange = PassthroughSubject<Void, Never>()
+    
+    var brain: CalculatorBrain = .left("0") {
+        willSet{
+            objectWillChange.send()
+        }
+    }
+    
+}
+```
+
+## @EnvironmentObject
+
+从名字上可以看出，这个修饰器是针对全局环境的。通过它，我们可以避免在初始 View 时创建 ObservableObject, 而是从环境中获取 ObservableObject
+
+被标记为 @EnvironmentObject 的值进 行指定，它们会自动去查询 View 的 Environment 中是否有符合的类型的值，如果有 则使用它们，如没有则抛出运行时的错误。 
+
+## @Environment
+
+继续上面一段的说明，我们的确开一个从 Environment 拿到用户自定义的 object，但是 SwiftUI 本身就有很多系统级别的设定，我们开一个通过 @Environment 来获取到它们
+
+```swift
+struct CalendarView: View {
+    @Environment(\.calendar) var calendar: Calendar
+    @Environment(\.locale) var locale: Locale
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+
+    var body: some View {
+        return Text(locale.identifier)
+    }
+}
+```
 
 # SwiftUI
 

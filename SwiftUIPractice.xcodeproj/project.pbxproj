@@ -16,12 +16,14 @@
 		AC1267272444A7D900CEAC73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1267262444A7D900CEAC73 /* Post.swift */; };
 		AC1267292445163C00CEAC73 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1267282445163C00CEAC73 /* PostList.swift */; };
 		AC12672C2445186A00CEAC73 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12672B2445186A00CEAC73 /* PostViewModel.swift */; };
-		AC1563D824442ED500644DFA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1563D724442ED500644DFA /* SwiftUIView.swift */; };
+		AC1563D824442ED500644DFA /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1563D724442ED500644DFA /* CalculatorView.swift */; };
 		AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F592B2442CC4E00CE301E /* OC2Swift.swift */; };
 		AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */; };
 		AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */; };
 		AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */; };
 		AC9CDD452445F60800128528 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD442445F60800128528 /* PostListView.swift */; };
+		AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD4624465CF300128528 /* CalculatorModel.swift */; };
+		ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA6A23244668CC0029A0DD /* HistoryView.swift */; };
 		ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BB824418C5900B27242 /* AppDelegate.swift */; };
 		ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBA24418C5900B27242 /* SceneDelegate.swift */; };
 		ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBC24418C5900B27242 /* ContentView.swift */; };
@@ -31,6 +33,7 @@
 		ACD17BD024418C5E00B27242 /* SwiftUIPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BCF24418C5E00B27242 /* SwiftUIPracticeTests.swift */; };
 		ACD17BDB24418C5E00B27242 /* SwiftUIPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BDA24418C5E00B27242 /* SwiftUIPracticeUITests.swift */; };
 		ACD17BEA2441905B00B27242 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BE92441905B00B27242 /* PostCell.swift */; };
+		ACE7655C244683FD00BC896F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7655B244683FD00BC896F /* CalendarView.swift */; };
 		ACF1406A2441A81400643A57 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF140692441A81400643A57 /* R.generated.swift */; };
 		ACF140BF2441A85B00643A57 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF1406C2441A85B00643A57 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg */; };
 		ACF140C02441A85B00643A57 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF1406D2441A85B00643A57 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg */; };
@@ -152,12 +155,14 @@
 		AC1267262444A7D900CEAC73 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AC1267282445163C00CEAC73 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		AC12672B2445186A00CEAC73 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		AC1563D724442ED500644DFA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		AC1563D724442ED500644DFA /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		AC1F592B2442CC4E00CE301E /* OC2Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC2Swift.swift; sourceTree = "<group>"; };
 		AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPropertyWrapper.swift; sourceTree = "<group>"; };
 		AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
 		AC9CDD442445F60800128528 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		AC9CDD4624465CF300128528 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		ACBA6A23244668CC0029A0DD /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		ACD17BB524418C5900B27242 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD17BB824418C5900B27242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD17BBA24418C5900B27242 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 		ACD17BDA24418C5E00B27242 /* SwiftUIPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeUITests.swift; sourceTree = "<group>"; };
 		ACD17BDC24418C5E00B27242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACD17BE92441905B00B27242 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		ACE7655B244683FD00BC896F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		ACF140692441A81400643A57 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		ACF1406C2441A85B00643A57 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8697cf1ely8gashxj3b09j20u00u040v.jpg; sourceTree = "<group>"; };
 		ACF1406D2441A85B00643A57 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d0c21786ly1gavj2c0kcej20c8096dh7.jpg; sourceTree = "<group>"; };
@@ -307,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				AC12671C2444762E00CEAC73 /* CalculatorButtonItem.swift */,
+				AC9CDD4624465CF300128528 /* CalculatorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,10 +359,12 @@
 		AC1563D624442E1100644DFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC1563D724442ED500644DFA /* SwiftUIView.swift */,
-				AC1267202444A05000CEAC73 /* CalculatorButton.swift */,
-				AC12671E2444A02C00CEAC73 /* CalculatorButtonRow.swift */,
+				AC1563D724442ED500644DFA /* CalculatorView.swift */,
 				AC1267222444A56800CEAC73 /* CalculatorButtonPad.swift */,
+				AC12671E2444A02C00CEAC73 /* CalculatorButtonRow.swift */,
+				AC1267202444A05000CEAC73 /* CalculatorButton.swift */,
+				ACBA6A23244668CC0029A0DD /* HistoryView.swift */,
+				ACE7655B244683FD00BC896F /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -937,14 +946,17 @@
 				AC12672C2445186A00CEAC73 /* PostViewModel.swift in Sources */,
 				ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */,
 				AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */,
-				AC1563D824442ED500644DFA /* SwiftUIView.swift in Sources */,
+				AC1563D824442ED500644DFA /* CalculatorView.swift in Sources */,
 				AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */,
 				AC1267272444A7D900CEAC73 /* Post.swift in Sources */,
+				ACE7655C244683FD00BC896F /* CalendarView.swift in Sources */,
 				AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */,
+				ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */,
 				AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */,
 				AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */,
 				AC9CDD452445F60800128528 /* PostListView.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
+				AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */,
 				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,
