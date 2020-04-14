@@ -77,4 +77,10 @@ class SwiftUIPracticeTests: XCTestCase {
         }
     }
 
+    @Converter(initialValue: "100", from: "USD", to: "CNY", rate: 6.88)
+    var usd_cny
+    
+    func testPropertyWrapper() {
+        print("\(usd_cny) = \($usd_cny)")
+    }
 }
