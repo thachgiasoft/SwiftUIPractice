@@ -168,6 +168,50 @@ struct CalendarView: View {
    .buttonStyle(BorderlessButtonStyle())
    ```
 
+
+## NavigationView
+
+1. 隐藏右侧按钮
+
+   ```swift
+   //Post实现了Identifiable协议，可以省略id: \.id
+   ForEach(loadPostListData("PostListData_recommend_1.json").list) { post in
+       ZStack{
+           PostCell(post: post)
+           NavigationLink(destination: PostDetailView(post: post)) {
+               EmptyView()
+           }.hidden()
+       }
+       .listRowInsets(EdgeInsets())
+   }
+   ```
+
+   
+
+2. 纠正详情页title
+
+   ```swift
+   List {
+       PostCell(post: post)
+           .listRowInsets(EdgeInsets())
+   
+       ForEach(1...10, id: \.self) { i in
+           Text("评论\(i)")
+       }
+   }
+   .navigationBarTitle("详情", displayMode: .inline)
+   ```
+
+3. 必须设置title隐藏bar才起作用
+
+   ```swift
+   NavigationView {
+       PostListView()
+       .navigationBarTitle("Title")//必须设置title隐藏bar才起作用
+       .navigationBarHidden(true)
+   }
+   ```
+
    
 
 ## 预览多尺寸以及适配
@@ -207,6 +251,29 @@ struct SwiftUIView_Previews: PreviewProvider {
    ```
 
 3. 整体使用 scaleEffect 进行缩放，会在布局时带来困难，因为它只是对视觉上进行了 缩放，而布局还是依照原有的尺寸进行。相对于整体的 scale 操作，可能对单个具体 元素的 frame 进行缩放效果会好一些 。
+
+4. 多尺寸布局查看
+
+   ```swift
+   struct PostImageCell_Previews: PreviewProvider {
+       static var previews: some View {
+           let list = loadPostListData("PostListData_recommend_1.json").list
+           let width = UIScreen.main.bounds.width
+   
+           return Group{
+               PostImageCell(images: Array(list[0].images[0...0]), width: width)
+               PostImageCell(images: Array(list[0].images[0...1]), width: width)
+               PostImageCell(images: Array(list[0].images[0...2]), width: width)
+               PostImageCell(images: Array(list[0].images[0...3]), width: width)
+               PostImageCell(images: Array(list[0].images[0...4]), width: width)
+               PostImageCell(images: Array(list[0].images[0...5]), width: width)
+           }
+           .previewLayout(.fixed(width: width, height: 300))
+       }
+   }
+   ```
+
+   
 
 ## Modifier顺序的影响
 

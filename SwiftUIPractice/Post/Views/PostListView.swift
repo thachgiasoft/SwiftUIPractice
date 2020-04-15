@@ -18,7 +18,13 @@ struct PostListView: View {
 //            ForEach(loadPostListData("PostListData_recommend_1.json").list, id: \.id)
             //Post实现了Identifiable协议，可以省略id: \.id
             ForEach(loadPostListData("PostListData_recommend_1.json").list) { post in
-                PostCell(post: post).listRowInsets(EdgeInsets())
+                ZStack{
+                    PostCell(post: post)
+                    NavigationLink(destination: PostDetailView(post: post)) {
+                        EmptyView()
+                    }.hidden()
+                }
+                .listRowInsets(EdgeInsets())
             }
         }
     }
@@ -26,6 +32,10 @@ struct PostListView: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView()
+        NavigationView {
+            PostListView()
+            .navigationBarTitle("Title")//必须设置title隐藏bar才起作用
+            .navigationBarHidden(true)
+        }
     }
 }

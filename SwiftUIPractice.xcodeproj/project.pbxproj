@@ -24,6 +24,7 @@
 		AC9CDD452445F60800128528 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD442445F60800128528 /* PostListView.swift */; };
 		AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD4624465CF300128528 /* CalculatorModel.swift */; };
 		ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA6A23244668CC0029A0DD /* HistoryView.swift */; };
+		ACD085DB2447476700324D8E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD085DA2447476700324D8E /* PostDetailView.swift */; };
 		ACD1644C24470BA9000D861E /* pokemon-species-11.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD1640C24470BA9000D861E /* pokemon-species-11.json */; };
 		ACD1644D24470BA9000D861E /* pokemon-species-7.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD1640D24470BA9000D861E /* pokemon-species-7.json */; };
 		ACD1644E24470BA9000D861E /* pokemon-species-27.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD1640E24470BA9000D861E /* pokemon-species-27.json */; };
@@ -97,6 +98,7 @@
 		ACD1649B24470CDF000D861E /* AbilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1649924470CDF000D861E /* AbilityViewModel.swift */; };
 		ACD1649D24470D69000D861E /* PokemonInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1649C24470D69000D861E /* PokemonInfoRow.swift */; };
 		ACD1649F2447108A000D861E /* ToolButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD1649E2447108A000D861E /* ToolButtonModifier.swift */; };
+		ACD164A224473FA5000D861E /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD164A124473FA5000D861E /* PostImageCell.swift */; };
 		ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BB824418C5900B27242 /* AppDelegate.swift */; };
 		ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBA24418C5900B27242 /* SceneDelegate.swift */; };
 		ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD17BBC24418C5900B27242 /* ContentView.swift */; };
@@ -236,6 +238,7 @@
 		AC9CDD442445F60800128528 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		AC9CDD4624465CF300128528 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		ACBA6A23244668CC0029A0DD /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		ACD085DA2447476700324D8E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		ACD1640C24470BA9000D861E /* pokemon-species-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-species-11.json"; sourceTree = "<group>"; };
 		ACD1640D24470BA9000D861E /* pokemon-species-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-species-7.json"; sourceTree = "<group>"; };
 		ACD1640E24470BA9000D861E /* pokemon-species-27.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-species-27.json"; sourceTree = "<group>"; };
@@ -309,6 +312,7 @@
 		ACD1649924470CDF000D861E /* AbilityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityViewModel.swift; sourceTree = "<group>"; };
 		ACD1649C24470D69000D861E /* PokemonInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoRow.swift; sourceTree = "<group>"; };
 		ACD1649E2447108A000D861E /* ToolButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolButtonModifier.swift; sourceTree = "<group>"; };
+		ACD164A124473FA5000D861E /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		ACD17BB524418C5900B27242 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD17BB824418C5900B27242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD17BBA24418C5900B27242 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -754,10 +758,12 @@
 		ACD17BE82441903F00B27242 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC9CDD442445F60800128528 /* PostListView.swift */,
 				ACD17BE92441905B00B27242 /* PostCell.swift */,
 				ACF141122441AC8800643A57 /* PostVipBadge.swift */,
 				AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */,
-				AC9CDD442445F60800128528 /* PostListView.swift */,
+				ACD164A124473FA5000D861E /* PostImageCell.swift */,
+				ACD085DA2447476700324D8E /* PostDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1307,6 +1313,7 @@
 				ACE7655C244683FD00BC896F /* CalendarView.swift in Sources */,
 				AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */,
 				ACD1649424470CB3000D861E /* Pokemon.swift in Sources */,
+				ACD085DB2447476700324D8E /* PostDetailView.swift in Sources */,
 				ACD1649724470CB3000D861E /* PokemonSpecies.swift in Sources */,
 				ACD1649D24470D69000D861E /* PokemonInfoRow.swift in Sources */,
 				ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */,
@@ -1319,6 +1326,7 @@
 				ACD1649624470CB3000D861E /* Language.swift in Sources */,
 				AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */,
 				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
+				ACD164A224473FA5000D861E /* PostImageCell.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,
 				ACD17BEA2441905B00B27242 /* PostCell.swift in Sources */,
