@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 4 colors.
+  /// This `R.color` struct is generated, and contains static references to 14 colors.
   struct color {
     /// Color `commandBackground`.
     static let commandBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "commandBackground")
@@ -113,6 +113,26 @@ struct R: Rswift.Validatable {
     static let digitBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "digitBackground")
     /// Color `operatorBackground`.
     static let operatorBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "operatorBackground")
+    /// Color `pokemon-black`.
+    static let pokemonBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-black")
+    /// Color `pokemon-blue`.
+    static let pokemonBlue = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-blue")
+    /// Color `pokemon-brown`.
+    static let pokemonBrown = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-brown")
+    /// Color `pokemon-gray`.
+    static let pokemonGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-gray")
+    /// Color `pokemon-green`.
+    static let pokemonGreen = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-green")
+    /// Color `pokemon-pink`.
+    static let pokemonPink = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-pink")
+    /// Color `pokemon-purple`.
+    static let pokemonPurple = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-purple")
+    /// Color `pokemon-red`.
+    static let pokemonRed = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-red")
+    /// Color `pokemon-white`.
+    static let pokemonWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-white")
+    /// Color `pokemon-yellow`.
+    static let pokemonYellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "pokemon-yellow")
     /// Color `testColor`.
     static let testColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "testColor")
 
@@ -144,6 +164,96 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-black", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonBlack, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-blue", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonBlue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonBlue, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-brown", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonBrown(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonBrown, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-gray", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonGray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-green", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonGreen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonGreen, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-pink", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonPink(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonPink, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-purple", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonPurple(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonPurple, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-red", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonRed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonRed, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-white", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "pokemon-yellow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pokemonYellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pokemonYellow, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "testColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
@@ -155,7 +265,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 83 files.
+  /// This `R.file` struct is generated, and contains static references to 145 files.
   struct file {
     /// Resource file `005tnxzUly8gab4i2r73xj30u00u0js8.jpg`.
     static let tnxzUly8gab4i2r73xj30u00u0js8Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "005tnxzUly8gab4i2r73xj30u00u0js8", pathExtension: "jpg")
@@ -275,6 +385,10 @@ struct R: Rswift.Validatable {
     static let postListData_hot_1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "PostListData_hot_1", pathExtension: "json")
     /// Resource file `PostListData_recommend_1.json`.
     static let postListData_recommend_1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "PostListData_recommend_1", pathExtension: "json")
+    /// Resource file `ability-34.json`.
+    static let ability34Json = Rswift.FileResource(bundle: R.hostingBundle, name: "ability-34", pathExtension: "json")
+    /// Resource file `ability-65.json`.
+    static let ability65Json = Rswift.FileResource(bundle: R.hostingBundle, name: "ability-65", pathExtension: "json")
     /// Resource file `bca7fdafgw1ekhkps65b1j2050050dg4.jpg`.
     static let bca7fdafgw1ekhkps65b1j2050050dg4Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "bca7fdafgw1ekhkps65b1j2050050dg4", pathExtension: "jpg")
     /// Resource file `bca7fdafly1gax1gqd9vmj20c80ayaam.jpg`.
@@ -323,6 +437,126 @@ struct R: Rswift.Validatable {
     static let eb5c94aegy1gav26fycwlj20zk1h8drhJpg = Rswift.FileResource(bundle: R.hostingBundle, name: "eb5c94aegy1gav26fycwlj20zk1h8drh", pathExtension: "jpg")
     /// Resource file `eb5c94aely8fmvumnl9baj20v90v9q49.jpg`.
     static let eb5c94aely8fmvumnl9baj20v90v9q49Jpg = Rswift.FileResource(bundle: R.hostingBundle, name: "eb5c94aely8fmvumnl9baj20v90v9q49", pathExtension: "jpg")
+    /// Resource file `pokemon-1.json`.
+    static let pokemon1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-1", pathExtension: "json")
+    /// Resource file `pokemon-10.json`.
+    static let pokemon10Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-10", pathExtension: "json")
+    /// Resource file `pokemon-11.json`.
+    static let pokemon11Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-11", pathExtension: "json")
+    /// Resource file `pokemon-12.json`.
+    static let pokemon12Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-12", pathExtension: "json")
+    /// Resource file `pokemon-13.json`.
+    static let pokemon13Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-13", pathExtension: "json")
+    /// Resource file `pokemon-14.json`.
+    static let pokemon14Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-14", pathExtension: "json")
+    /// Resource file `pokemon-15.json`.
+    static let pokemon15Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-15", pathExtension: "json")
+    /// Resource file `pokemon-16.json`.
+    static let pokemon16Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-16", pathExtension: "json")
+    /// Resource file `pokemon-17.json`.
+    static let pokemon17Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-17", pathExtension: "json")
+    /// Resource file `pokemon-18.json`.
+    static let pokemon18Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-18", pathExtension: "json")
+    /// Resource file `pokemon-19.json`.
+    static let pokemon19Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-19", pathExtension: "json")
+    /// Resource file `pokemon-2.json`.
+    static let pokemon2Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-2", pathExtension: "json")
+    /// Resource file `pokemon-20.json`.
+    static let pokemon20Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-20", pathExtension: "json")
+    /// Resource file `pokemon-21.json`.
+    static let pokemon21Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-21", pathExtension: "json")
+    /// Resource file `pokemon-22.json`.
+    static let pokemon22Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-22", pathExtension: "json")
+    /// Resource file `pokemon-23.json`.
+    static let pokemon23Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-23", pathExtension: "json")
+    /// Resource file `pokemon-24.json`.
+    static let pokemon24Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-24", pathExtension: "json")
+    /// Resource file `pokemon-25.json`.
+    static let pokemon25Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-25", pathExtension: "json")
+    /// Resource file `pokemon-26.json`.
+    static let pokemon26Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-26", pathExtension: "json")
+    /// Resource file `pokemon-27.json`.
+    static let pokemon27Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-27", pathExtension: "json")
+    /// Resource file `pokemon-28.json`.
+    static let pokemon28Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-28", pathExtension: "json")
+    /// Resource file `pokemon-29.json`.
+    static let pokemon29Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-29", pathExtension: "json")
+    /// Resource file `pokemon-3.json`.
+    static let pokemon3Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-3", pathExtension: "json")
+    /// Resource file `pokemon-30.json`.
+    static let pokemon30Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-30", pathExtension: "json")
+    /// Resource file `pokemon-4.json`.
+    static let pokemon4Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-4", pathExtension: "json")
+    /// Resource file `pokemon-5.json`.
+    static let pokemon5Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-5", pathExtension: "json")
+    /// Resource file `pokemon-6.json`.
+    static let pokemon6Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-6", pathExtension: "json")
+    /// Resource file `pokemon-7.json`.
+    static let pokemon7Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-7", pathExtension: "json")
+    /// Resource file `pokemon-8.json`.
+    static let pokemon8Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-8", pathExtension: "json")
+    /// Resource file `pokemon-9.json`.
+    static let pokemon9Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-9", pathExtension: "json")
+    /// Resource file `pokemon-species-1.json`.
+    static let pokemonSpecies1Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-1", pathExtension: "json")
+    /// Resource file `pokemon-species-10.json`.
+    static let pokemonSpecies10Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-10", pathExtension: "json")
+    /// Resource file `pokemon-species-11.json`.
+    static let pokemonSpecies11Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-11", pathExtension: "json")
+    /// Resource file `pokemon-species-12.json`.
+    static let pokemonSpecies12Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-12", pathExtension: "json")
+    /// Resource file `pokemon-species-13.json`.
+    static let pokemonSpecies13Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-13", pathExtension: "json")
+    /// Resource file `pokemon-species-14.json`.
+    static let pokemonSpecies14Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-14", pathExtension: "json")
+    /// Resource file `pokemon-species-15.json`.
+    static let pokemonSpecies15Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-15", pathExtension: "json")
+    /// Resource file `pokemon-species-16.json`.
+    static let pokemonSpecies16Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-16", pathExtension: "json")
+    /// Resource file `pokemon-species-17.json`.
+    static let pokemonSpecies17Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-17", pathExtension: "json")
+    /// Resource file `pokemon-species-18.json`.
+    static let pokemonSpecies18Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-18", pathExtension: "json")
+    /// Resource file `pokemon-species-19.json`.
+    static let pokemonSpecies19Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-19", pathExtension: "json")
+    /// Resource file `pokemon-species-2.json`.
+    static let pokemonSpecies2Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-2", pathExtension: "json")
+    /// Resource file `pokemon-species-20.json`.
+    static let pokemonSpecies20Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-20", pathExtension: "json")
+    /// Resource file `pokemon-species-21.json`.
+    static let pokemonSpecies21Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-21", pathExtension: "json")
+    /// Resource file `pokemon-species-22.json`.
+    static let pokemonSpecies22Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-22", pathExtension: "json")
+    /// Resource file `pokemon-species-23.json`.
+    static let pokemonSpecies23Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-23", pathExtension: "json")
+    /// Resource file `pokemon-species-24.json`.
+    static let pokemonSpecies24Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-24", pathExtension: "json")
+    /// Resource file `pokemon-species-25.json`.
+    static let pokemonSpecies25Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-25", pathExtension: "json")
+    /// Resource file `pokemon-species-26.json`.
+    static let pokemonSpecies26Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-26", pathExtension: "json")
+    /// Resource file `pokemon-species-27.json`.
+    static let pokemonSpecies27Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-27", pathExtension: "json")
+    /// Resource file `pokemon-species-28.json`.
+    static let pokemonSpecies28Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-28", pathExtension: "json")
+    /// Resource file `pokemon-species-29.json`.
+    static let pokemonSpecies29Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-29", pathExtension: "json")
+    /// Resource file `pokemon-species-3.json`.
+    static let pokemonSpecies3Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-3", pathExtension: "json")
+    /// Resource file `pokemon-species-30.json`.
+    static let pokemonSpecies30Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-30", pathExtension: "json")
+    /// Resource file `pokemon-species-4.json`.
+    static let pokemonSpecies4Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-4", pathExtension: "json")
+    /// Resource file `pokemon-species-5.json`.
+    static let pokemonSpecies5Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-5", pathExtension: "json")
+    /// Resource file `pokemon-species-6.json`.
+    static let pokemonSpecies6Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-6", pathExtension: "json")
+    /// Resource file `pokemon-species-7.json`.
+    static let pokemonSpecies7Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-7", pathExtension: "json")
+    /// Resource file `pokemon-species-8.json`.
+    static let pokemonSpecies8Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-8", pathExtension: "json")
+    /// Resource file `pokemon-species-9.json`.
+    static let pokemonSpecies9Json = Rswift.FileResource(bundle: R.hostingBundle, name: "pokemon-species-9", pathExtension: "json")
 
     /// `bundle.url(forResource: "005tnxzUly8gab4i2r73xj30u00u0js8", withExtension: "jpg")`
     static func tnxzUly8gab4i2r73xj30u00u0js8Jpg(_: Void = ()) -> Foundation.URL? {
@@ -678,6 +912,18 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
+    /// `bundle.url(forResource: "ability-34", withExtension: "json")`
+    static func ability34Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.ability34Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "ability-65", withExtension: "json")`
+    static func ability65Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.ability65Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
     /// `bundle.url(forResource: "bca7fdafgw1ekhkps65b1j2050050dg4", withExtension: "jpg")`
     static func bca7fdafgw1ekhkps65b1j2050050dg4Jpg(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.bca7fdafgw1ekhkps65b1j2050050dg4Jpg
@@ -822,10 +1068,370 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
+    /// `bundle.url(forResource: "pokemon-1", withExtension: "json")`
+    static func pokemon1Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon1Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-10", withExtension: "json")`
+    static func pokemon10Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon10Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-11", withExtension: "json")`
+    static func pokemon11Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon11Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-12", withExtension: "json")`
+    static func pokemon12Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon12Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-13", withExtension: "json")`
+    static func pokemon13Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon13Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-14", withExtension: "json")`
+    static func pokemon14Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon14Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-15", withExtension: "json")`
+    static func pokemon15Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon15Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-16", withExtension: "json")`
+    static func pokemon16Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon16Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-17", withExtension: "json")`
+    static func pokemon17Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon17Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-18", withExtension: "json")`
+    static func pokemon18Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon18Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-19", withExtension: "json")`
+    static func pokemon19Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon19Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-2", withExtension: "json")`
+    static func pokemon2Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon2Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-20", withExtension: "json")`
+    static func pokemon20Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon20Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-21", withExtension: "json")`
+    static func pokemon21Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon21Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-22", withExtension: "json")`
+    static func pokemon22Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon22Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-23", withExtension: "json")`
+    static func pokemon23Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon23Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-24", withExtension: "json")`
+    static func pokemon24Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon24Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-25", withExtension: "json")`
+    static func pokemon25Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon25Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-26", withExtension: "json")`
+    static func pokemon26Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon26Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-27", withExtension: "json")`
+    static func pokemon27Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon27Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-28", withExtension: "json")`
+    static func pokemon28Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon28Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-29", withExtension: "json")`
+    static func pokemon29Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon29Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-3", withExtension: "json")`
+    static func pokemon3Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon3Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-30", withExtension: "json")`
+    static func pokemon30Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon30Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-4", withExtension: "json")`
+    static func pokemon4Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon4Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-5", withExtension: "json")`
+    static func pokemon5Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon5Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-6", withExtension: "json")`
+    static func pokemon6Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon6Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-7", withExtension: "json")`
+    static func pokemon7Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon7Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-8", withExtension: "json")`
+    static func pokemon8Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon8Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-9", withExtension: "json")`
+    static func pokemon9Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemon9Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-1", withExtension: "json")`
+    static func pokemonSpecies1Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies1Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-10", withExtension: "json")`
+    static func pokemonSpecies10Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies10Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-11", withExtension: "json")`
+    static func pokemonSpecies11Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies11Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-12", withExtension: "json")`
+    static func pokemonSpecies12Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies12Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-13", withExtension: "json")`
+    static func pokemonSpecies13Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies13Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-14", withExtension: "json")`
+    static func pokemonSpecies14Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies14Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-15", withExtension: "json")`
+    static func pokemonSpecies15Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies15Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-16", withExtension: "json")`
+    static func pokemonSpecies16Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies16Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-17", withExtension: "json")`
+    static func pokemonSpecies17Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies17Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-18", withExtension: "json")`
+    static func pokemonSpecies18Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies18Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-19", withExtension: "json")`
+    static func pokemonSpecies19Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies19Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-2", withExtension: "json")`
+    static func pokemonSpecies2Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies2Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-20", withExtension: "json")`
+    static func pokemonSpecies20Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies20Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-21", withExtension: "json")`
+    static func pokemonSpecies21Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies21Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-22", withExtension: "json")`
+    static func pokemonSpecies22Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies22Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-23", withExtension: "json")`
+    static func pokemonSpecies23Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies23Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-24", withExtension: "json")`
+    static func pokemonSpecies24Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies24Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-25", withExtension: "json")`
+    static func pokemonSpecies25Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies25Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-26", withExtension: "json")`
+    static func pokemonSpecies26Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies26Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-27", withExtension: "json")`
+    static func pokemonSpecies27Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies27Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-28", withExtension: "json")`
+    static func pokemonSpecies28Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies28Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-29", withExtension: "json")`
+    static func pokemonSpecies29Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies29Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-3", withExtension: "json")`
+    static func pokemonSpecies3Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies3Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-30", withExtension: "json")`
+    static func pokemonSpecies30Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies30Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-4", withExtension: "json")`
+    static func pokemonSpecies4Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies4Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-5", withExtension: "json")`
+    static func pokemonSpecies5Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies5Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-6", withExtension: "json")`
+    static func pokemonSpecies6Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies6Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-7", withExtension: "json")`
+    static func pokemonSpecies7Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies7Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-8", withExtension: "json")`
+    static func pokemonSpecies8Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies8Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "pokemon-species-9", withExtension: "json")`
+    static func pokemonSpecies9Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.pokemonSpecies9Json
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 81 images.
+  /// This `R.image` struct is generated, and contains static references to 115 images.
   struct image {
     /// Image `005tnxzUly8gab4i2r73xj30u00u0js8.jpg`.
     static let tnxzUly8gab4i2r73xj30u00u0js8Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "005tnxzUly8gab4i2r73xj30u00u0js8.jpg")
@@ -941,6 +1547,66 @@ struct R: Rswift.Validatable {
     static let dc7402fgy1gavd39ba15j20j60nywiiJpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "9dc7402fgy1gavd39ba15j20j60nywii.jpg")
     /// Image `9dc7402fjw1e8qgp5bmzyj2050050aa8.jpg`.
     static let dc7402fjw1e8qgp5bmzyj2050050aa8Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "9dc7402fjw1e8qgp5bmzyj2050050aa8.jpg")
+    /// Image `Pokemon-10`.
+    static let pokemon10 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-10")
+    /// Image `Pokemon-11`.
+    static let pokemon11 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-11")
+    /// Image `Pokemon-12`.
+    static let pokemon12 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-12")
+    /// Image `Pokemon-13`.
+    static let pokemon13 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-13")
+    /// Image `Pokemon-14`.
+    static let pokemon14 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-14")
+    /// Image `Pokemon-15`.
+    static let pokemon15 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-15")
+    /// Image `Pokemon-16`.
+    static let pokemon16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-16")
+    /// Image `Pokemon-17`.
+    static let pokemon17 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-17")
+    /// Image `Pokemon-18`.
+    static let pokemon18 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-18")
+    /// Image `Pokemon-19`.
+    static let pokemon19 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-19")
+    /// Image `Pokemon-1`.
+    static let pokemon1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-1")
+    /// Image `Pokemon-20`.
+    static let pokemon20 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-20")
+    /// Image `Pokemon-21`.
+    static let pokemon21 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-21")
+    /// Image `Pokemon-22`.
+    static let pokemon22 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-22")
+    /// Image `Pokemon-23`.
+    static let pokemon23 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-23")
+    /// Image `Pokemon-24`.
+    static let pokemon24 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-24")
+    /// Image `Pokemon-25`.
+    static let pokemon25 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-25")
+    /// Image `Pokemon-26`.
+    static let pokemon26 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-26")
+    /// Image `Pokemon-27`.
+    static let pokemon27 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-27")
+    /// Image `Pokemon-28`.
+    static let pokemon28 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-28")
+    /// Image `Pokemon-29`.
+    static let pokemon29 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-29")
+    /// Image `Pokemon-2`.
+    static let pokemon2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-2")
+    /// Image `Pokemon-30`.
+    static let pokemon30 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-30")
+    /// Image `Pokemon-3`.
+    static let pokemon3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-3")
+    /// Image `Pokemon-4`.
+    static let pokemon4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-4")
+    /// Image `Pokemon-5`.
+    static let pokemon5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-5")
+    /// Image `Pokemon-6`.
+    static let pokemon6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-6")
+    /// Image `Pokemon-7`.
+    static let pokemon7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-7")
+    /// Image `Pokemon-8`.
+    static let pokemon8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-8")
+    /// Image `Pokemon-9`.
+    static let pokemon9 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pokemon-9")
     /// Image `bca7fdafgw1ekhkps65b1j2050050dg4.jpg`.
     static let bca7fdafgw1ekhkps65b1j2050050dg4Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "bca7fdafgw1ekhkps65b1j2050050dg4.jpg")
     /// Image `bca7fdafly1gax1gqd9vmj20c80ayaam.jpg`.
@@ -989,6 +1655,14 @@ struct R: Rswift.Validatable {
     static let eb5c94aegy1gav26fycwlj20zk1h8drhJpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "eb5c94aegy1gav26fycwlj20zk1h8drh.jpg")
     /// Image `eb5c94aely8fmvumnl9baj20v90v9q49.jpg`.
     static let eb5c94aely8fmvumnl9baj20v90v9q49Jpg = Rswift.ImageResource(bundle: R.hostingBundle, name: "eb5c94aely8fmvumnl9baj20v90v9q49.jpg")
+    /// Image `loading-0`.
+    static let loading0 = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading-0")
+    /// Image `loading-1`.
+    static let loading1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading-1")
+    /// Image `loading-2`.
+    static let loading2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading-2")
+    /// Image `loading-3`.
+    static let loading3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading-3")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "005tnxzUly8gab4i2r73xj30u00u0js8.jpg", bundle: ..., traitCollection: ...)`
@@ -1390,6 +2064,216 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-1", bundle: ..., traitCollection: ...)`
+    static func pokemon1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-10", bundle: ..., traitCollection: ...)`
+    static func pokemon10(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon10, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-11", bundle: ..., traitCollection: ...)`
+    static func pokemon11(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon11, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-12", bundle: ..., traitCollection: ...)`
+    static func pokemon12(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon12, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-13", bundle: ..., traitCollection: ...)`
+    static func pokemon13(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon13, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-14", bundle: ..., traitCollection: ...)`
+    static func pokemon14(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon14, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-15", bundle: ..., traitCollection: ...)`
+    static func pokemon15(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon15, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-16", bundle: ..., traitCollection: ...)`
+    static func pokemon16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-17", bundle: ..., traitCollection: ...)`
+    static func pokemon17(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon17, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-18", bundle: ..., traitCollection: ...)`
+    static func pokemon18(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon18, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-19", bundle: ..., traitCollection: ...)`
+    static func pokemon19(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon19, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-2", bundle: ..., traitCollection: ...)`
+    static func pokemon2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-20", bundle: ..., traitCollection: ...)`
+    static func pokemon20(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon20, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-21", bundle: ..., traitCollection: ...)`
+    static func pokemon21(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon21, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-22", bundle: ..., traitCollection: ...)`
+    static func pokemon22(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon22, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-23", bundle: ..., traitCollection: ...)`
+    static func pokemon23(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon23, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-24", bundle: ..., traitCollection: ...)`
+    static func pokemon24(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon24, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-25", bundle: ..., traitCollection: ...)`
+    static func pokemon25(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon25, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-26", bundle: ..., traitCollection: ...)`
+    static func pokemon26(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon26, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-27", bundle: ..., traitCollection: ...)`
+    static func pokemon27(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon27, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-28", bundle: ..., traitCollection: ...)`
+    static func pokemon28(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon28, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-29", bundle: ..., traitCollection: ...)`
+    static func pokemon29(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon29, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-3", bundle: ..., traitCollection: ...)`
+    static func pokemon3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon3, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-30", bundle: ..., traitCollection: ...)`
+    static func pokemon30(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon30, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-4", bundle: ..., traitCollection: ...)`
+    static func pokemon4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon4, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-5", bundle: ..., traitCollection: ...)`
+    static func pokemon5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon5, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-6", bundle: ..., traitCollection: ...)`
+    static func pokemon6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon6, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-7", bundle: ..., traitCollection: ...)`
+    static func pokemon7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon7, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-8", bundle: ..., traitCollection: ...)`
+    static func pokemon8(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon8, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Pokemon-9", bundle: ..., traitCollection: ...)`
+    static func pokemon9(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pokemon9, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "bca7fdafgw1ekhkps65b1j2050050dg4.jpg", bundle: ..., traitCollection: ...)`
     static func bca7fdafgw1ekhkps65b1j2050050dg4Jpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bca7fdafgw1ekhkps65b1j2050050dg4Jpg, compatibleWith: traitCollection)
@@ -1554,6 +2438,34 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "eb5c94aely8fmvumnl9baj20v90v9q49.jpg", bundle: ..., traitCollection: ...)`
     static func eb5c94aely8fmvumnl9baj20v90v9q49Jpg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.eb5c94aely8fmvumnl9baj20v90v9q49Jpg, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "loading-0", bundle: ..., traitCollection: ...)`
+    static func loading0(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loading0, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "loading-1", bundle: ..., traitCollection: ...)`
+    static func loading1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loading1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "loading-2", bundle: ..., traitCollection: ...)`
+    static func loading2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loading2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "loading-3", bundle: ..., traitCollection: ...)`
+    static func loading3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loading3, compatibleWith: traitCollection)
     }
     #endif
 

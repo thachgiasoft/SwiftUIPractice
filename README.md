@@ -256,3 +256,10 @@ view modifier分为两种：
    > b.数据遵循Identifiable协议
 
 4. type lookup List
+
+
+
+# 参考
+
+1. SF Symbols 图标库  https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/
+2. https://pokeapi.co/
