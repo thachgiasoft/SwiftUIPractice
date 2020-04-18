@@ -495,6 +495,8 @@ input.send(completion: .finished)
 
 #### Timer Publisher
 
+如果我们检查这个返回值的类型，会发现 Timer.TimerPublisher 是一个满足 ConnectablePublisher 的类型。ConnectablePublisher 不同于普通的 Publisher， 你需要明确地调用 connect() 方法，它才会开始发送事件: 
+
 ```swift
 import Combine
 import Foundation
@@ -505,6 +507,8 @@ let temp = check("Timer Connected") {
 }
 timer.connect()
 ```
+
+一个显而易见的问题是，既然我们需要调用 connect() 才能让事件开始发生，那当我 们不再关心这个事件流的时候，是不是应该本着资源使用的 “谁创建，谁释放” 的原 则，让这个事件流停止发送呢?答案是肯定的:connect() 会返回一个 Cancellable 值，我们需要在合适的时候调用 cancel() 来停止事件流并释放资源。同样地，对于 订阅来说，大多数情况下我们也需要及时取消，以保证内存不发生泄漏。 
 
 #### Notification Publisher
 
@@ -538,6 +542,8 @@ timer.connect()
 ```
 
 #### Publisher的引用共享
+
+将值语义的 dataTaskPublisher 转变为引用语义 (reference semantics)。我们只要在创建 dataTaskPublisher 后加上 share() 即可。 通过 share() 操作，原来的 Publisher 将被包装在 class 内，对它的进一步变形也会 适用引用语义: 
 
 ```swift
 import Combine
@@ -579,9 +585,15 @@ var token1 = isSuccess.assign(to: \.isSuccess, on: ui)
 var token2 = latestText.assign(to: \.text, on: ui)
 ```
 
+对于多个 Subscriber 对应一个 Publisher 的情况，如果我们不想让订阅行为反复发 生 (比如上例中订阅时会发生网络请求)，而是想要共享这个 Publisher 的话，使用 share() 将它转变为引用类型的 class。
+
 ### Cancellable,AnyCancellable和内存管理
 
+在上面 Timer 的案例中，对计时器的 Publisher 执行 connect() 后得到的结果是一个 满足 Cancellable 协议的对象;用 sink 或 assign 来订阅某个 Publisher 时，我们必 须要持有返回值才能让这个订阅正常工作，该返回值的类型为 AnyCancellable。 
+
 #### Cancellable
+
+上面的操作有一个共同的特点，那就是它们都要求随着时间流动，计时器或者订阅 要能继续响应和工作。这必然需要某种 “资源”，并持有它们，以保持自己在内存中 依然存在。对于 Cancellable，我们需要在合适的时候主动调用 cancel() 方法来完 结:比如停止 Timer 的继续计时。如果我们在没有调用 cancel() 的情况下就将 connect 的返回值忽略或者释放掉，那么我们就将永远无法停止这个 Timer，它会一 直计时，并造成内存泄漏。 
 
 ```swift
 public protocol Cancellable {
@@ -592,6 +604,8 @@ public protocol Cancellable {
 ```
 
 #### AnyCancellable
+
+和 Cancellable 这个抽象的协议不同，AnyCancellable 是一个 class，这也赋予了它 对自身的生命周期进行管理的能力。对于一般的 Cancellable，例如 connect 的返回 值，我们需要显式地调用 cancel() 来停止活动，但 AnyCancellable 则在自己的 deinit 中帮我们做了这件事。换句话说，当 sink 或 assign 返回的 AnyCancellable 被释放时，它对应的订阅操作也将停止。在实际里，我们一般会把这个 AnyCancellable 设置为所在实例 (比如 UIViewController) 的存储属性。这样，当该 实例 deinit 时，AnyCancellable 的 deinit 也会被触发，并自动释放资源。如果你对 RxSwift 有了解的话，它的行为和 DisposeBag 很类似，为了操作简便，我们也完全 可以为 Combine 自定义一个类似的 DisposeBag 类型来管理内存释放。 
 
 ```swift
 final public class AnyCancellable : Cancellable, Hashable {
@@ -642,7 +656,15 @@ final public class AnyCancellable : Cancellable, Hashable {
 }
 ```
 
+针对上面 Combine 中常见的内存资源相关的操作，可以总结几条常见的规则和实践: 
 
+1. 对于需要 connect 的 Publisher，在 connect 后需要保存返回的 Cancellable， 
+
+   并在合适的时候调用 cancel() 以结束事件的持续发布。 
+
+2. 对于 sink 或 assign 的返回值，一般将其存储在实例的变量中，等待属性持有 者被释放时一同自动取消。不过，你也完全可以在不需要时提前释放这个变量 或者明确地调用 cancel() 以取消绑定。 
+
+3. 对于 1 的情况，也完全可以将 Cancellable 作为参数传递给 AnyCancellable 的初始化方法，将它包装成为一个可以自动取消的对象。这样一来，1 将被转 换为 2 的情况。
 
 # SwiftUI
 
