@@ -18,6 +18,11 @@
 		AC12672C2445186A00CEAC73 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12672B2445186A00CEAC73 /* PostViewModel.swift */; };
 		AC1563D824442ED500644DFA /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1563D724442ED500644DFA /* CalculatorView.swift */; };
 		AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F592B2442CC4E00CE301E /* OC2Swift.swift */; };
+		AC31818E244B145F005F2D60 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31818D244B145F005F2D60 /* HomeNavigationBar.swift */; };
+		AC318190244B15F0005F2D60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC31818F244B15F0005F2D60 /* README.md */; };
+		AC318192244B1BBB005F2D60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318191244B1BBB005F2D60 /* HomeView.swift */; };
+		AC318194244B1D0D005F2D60 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318193244B1D0D005F2D60 /* UserData.swift */; };
+		AC318196244B24E3005F2D60 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318195244B24E3005F2D60 /* HScrollViewController.swift */; };
 		AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */; };
 		AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */; };
 		AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */; };
@@ -232,6 +237,11 @@
 		AC12672B2445186A00CEAC73 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		AC1563D724442ED500644DFA /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		AC1F592B2442CC4E00CE301E /* OC2Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OC2Swift.swift; sourceTree = "<group>"; };
+		AC31818D244B145F005F2D60 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		AC31818F244B15F0005F2D60 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AC318191244B1BBB005F2D60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AC318193244B1D0D005F2D60 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		AC318195244B24E3005F2D60 /* HScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
 		AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPropertyWrapper.swift; sourceTree = "<group>"; };
 		AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
@@ -491,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				AC12672B2445186A00CEAC73 /* PostViewModel.swift */,
+				AC318193244B1D0D005F2D60 /* UserData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -690,6 +701,7 @@
 		ACD17BAC24418C5900B27242 = {
 			isa = PBXGroup;
 			children = (
+				AC31818F244B15F0005F2D60 /* README.md */,
 				ACD17BB724418C5900B27242 /* SwiftUIPractice */,
 				ACD17BCE24418C5E00B27242 /* SwiftUIPracticeTests */,
 				ACD17BD924418C5E00B27242 /* SwiftUIPracticeUITests */,
@@ -758,12 +770,15 @@
 		ACD17BE82441903F00B27242 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC318191244B1BBB005F2D60 /* HomeView.swift */,
 				AC9CDD442445F60800128528 /* PostListView.swift */,
 				ACD17BE92441905B00B27242 /* PostCell.swift */,
 				ACF141122441AC8800643A57 /* PostVipBadge.swift */,
 				AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */,
 				ACD164A124473FA5000D861E /* PostImageCell.swift */,
 				ACD085DA2447476700324D8E /* PostDetailView.swift */,
+				AC31818D244B145F005F2D60 /* HomeNavigationBar.swift */,
+				AC318195244B24E3005F2D60 /* HScrollViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1019,6 +1034,7 @@
 				ACF141102441A85B00643A57 /* 6ec3b446gy1gavd523embj20j60pytd6.jpg in Resources */,
 				ACF140DD2441A85B00643A57 /* 8a0b5544gy1gauy2gmkg9j20u00gegnp.jpg in Resources */,
 				ACD1645724470BAA000D861E /* pokemon-species-20.json in Resources */,
+				AC318190244B15F0005F2D60 /* README.md in Resources */,
 				ACF140D32441A85B00643A57 /* 8a0b5544gy1gauy2ex786j20u0129aed.jpg in Resources */,
 				ACD1646224470BAA000D861E /* pokemon-species-13.json in Resources */,
 				ACD1646824470BAA000D861E /* pokemon-species-28.json in Resources */,
@@ -1314,6 +1330,7 @@
 				AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */,
 				ACD1649424470CB3000D861E /* Pokemon.swift in Sources */,
 				ACD085DB2447476700324D8E /* PostDetailView.swift in Sources */,
+				AC31818E244B145F005F2D60 /* HomeNavigationBar.swift in Sources */,
 				ACD1649724470CB3000D861E /* PokemonSpecies.swift in Sources */,
 				ACD1649D24470D69000D861E /* PokemonInfoRow.swift in Sources */,
 				ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */,
@@ -1323,7 +1340,9 @@
 				AC9CDD452445F60800128528 /* PostListView.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
 				ACD1648F24470BF9000D861E /* FileHelper.swift in Sources */,
+				AC318194244B1D0D005F2D60 /* UserData.swift in Sources */,
 				ACD1649624470CB3000D861E /* Language.swift in Sources */,
+				AC318192244B1BBB005F2D60 /* HomeView.swift in Sources */,
 				AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */,
 				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
 				ACD164A224473FA5000D861E /* PostImageCell.swift in Sources */,
@@ -1334,6 +1353,7 @@
 				ACF141132441AC8800643A57 /* PostVipBadge.swift in Sources */,
 				ACD1649A24470CDF000D861E /* PokemonViewModel.swift in Sources */,
 				ACD1649F2447108A000D861E /* ToolButtonModifier.swift in Sources */,
+				AC318196244B24E3005F2D60 /* HScrollViewController.swift in Sources */,
 				AC12671D2444762E00CEAC73 /* CalculatorButtonItem.swift in Sources */,
 				AC1267232444A56800CEAC73 /* CalculatorButtonPad.swift in Sources */,
 				AC1267292445163C00CEAC73 /* PostList.swift in Sources */,

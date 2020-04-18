@@ -9,20 +9,25 @@
 import SwiftUI
 
 struct PostListView: View {
-    init() {
-        UITableView.appearance().separatorStyle = .none
-        UITableViewCell.appearance().selectionStyle = .none
-    }
+    let category: PostListCategory
+
+    @EnvironmentObject var userData: UserData
+    
+//    init() {
+//        UITableView.appearance().separatorStyle = .none
+//        UITableViewCell.appearance().selectionStyle = .none
+//    }
     var body: some View {
         List {
 //            ForEach(loadPostListData("PostListData_recommend_1.json").list, id: \.id)
             //Post实现了Identifiable协议，可以省略id: \.id
-            ForEach(loadPostListData("PostListData_recommend_1.json").list) { post in
-                ZStack{
+        ForEach(userData.postList(for: category).list) { post in
+                ZStack {
                     PostCell(post: post)
                     NavigationLink(destination: PostDetailView(post: post)) {
                         EmptyView()
-                    }.hidden()
+                    }
+                    .hidden()
                 }
                 .listRowInsets(EdgeInsets())
             }
@@ -33,7 +38,8 @@ struct PostListView: View {
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PostListView()
+            PostListView(category: .recommend)
+            .environmentObject(UserData())
             .navigationBarTitle("Title")//必须设置title隐藏bar才起作用
             .navigationBarHidden(true)
         }
