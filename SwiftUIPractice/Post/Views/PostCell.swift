@@ -11,8 +11,19 @@ import SwiftUI
 struct PostCell: View {
     let post: Post
     
+    @State
+    var presentComment: Bool = false
+    
+    @EnvironmentObject var userData: UserData
+    
+    var bindingPost: Post {
+        userData.post(forId: post.id)!
+    }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        var post = bindingPost
+        
+        return VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 5) {
                 post.avatarImage
                     .resizable()
@@ -40,6 +51,8 @@ struct PostCell: View {
                     
                     Button(action: {
                         print("click follow button")
+                        post.isFollowed = true
+                        self.userData.update(post)
                     }) {
                         Text("关注")
                             .font(.system(size: 14))
@@ -71,12 +84,24 @@ struct PostCell: View {
                 
                 PostCellToolbarButton(image: "message", text: post.commentCountText, color: .black) {
                     print("clicked message")
+                    self.presentComment.toggle()
+                }
+                .sheet(isPresented: $presentComment) {
+                    CommentInputView(post: self.post).environmentObject(self.userData)
                 }
                 
                 Spacer()
                 
                 PostCellToolbarButton(image: post.isLiked ? "heart.fill" : "heart", text: post.likeCountText, color: post.isLiked ? .red : .black) {
                     print("clicked heart")
+                    if post.isLiked {
+                        post.isLiked.toggle()
+                        post.likeCount -= 1
+                    }else{
+                        post.isLiked.toggle()
+                        post.likeCount += 1
+                    }
+                    self.userData.update(post)
                 }
                 
                 Spacer()
@@ -93,6 +118,8 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: loadPostListData("PostListData_recommend_1.json").list[0])
+        let userData = UserData()
+        
+        return PostCell(post: userData.recommedPostList.list[0]).environmentObject(userData)
     }
 }

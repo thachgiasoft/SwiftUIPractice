@@ -711,6 +711,18 @@ class CalculatorModel: ObservableObject {
 
 被标记为 @EnvironmentObject 的值进 行指定，它们会自动去查询 View 的 Environment 中是否有符合的类型的值，如果有 则使用它们，如没有则抛出运行时的错误。 
 
+sheet传递的EnvironmentObject数据不属于view的层级结构，需要明确数据再次传递。view层级结构中的不需要再传递，子view根据环境自己可以找到。
+
+```swift
+PostCellToolbarButton(image: "message", text: post.commentCountText, color: .black) {
+    print("clicked message")
+    self.presentComment.toggle()
+}
+.sheet(isPresented: $presentComment) {
+    CommentInputView(post: self.post).environmentObject(self.userData)
+}
+```
+
 ###@Environment
 
 继续上面一段的说明，我们的确开一个从 Environment 拿到用户自定义的 object，但是 SwiftUI 本身就有很多系统级别的设定，我们开一个通过 @Environment 来获取到它们
@@ -724,10 +736,8 @@ struct CalendarView: View {
     var body: some View {
         return Text(locale.identifier)
     }
-}
+} 
 ```
-
-# 
 
 ## Image
 

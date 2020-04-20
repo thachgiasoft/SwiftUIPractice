@@ -23,6 +23,9 @@
 		AC318192244B1BBB005F2D60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318191244B1BBB005F2D60 /* HomeView.swift */; };
 		AC318194244B1D0D005F2D60 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318193244B1D0D005F2D60 /* UserData.swift */; };
 		AC318196244B24E3005F2D60 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC318195244B24E3005F2D60 /* HScrollViewController.swift */; };
+		AC98C375244D05FC001ADFD9 /* CommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C374244D05FC001ADFD9 /* CommentInputView.swift */; };
+		AC98C377244D0C64001ADFD9 /* CommentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C376244D0C64001ADFD9 /* CommentTextView.swift */; };
+		AC98C37A244D10D8001ADFD9 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98C379244D10D8001ADFD9 /* KeyboardResponder.swift */; };
 		AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */; };
 		AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */; };
 		AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */; };
@@ -242,6 +245,9 @@
 		AC318191244B1BBB005F2D60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC318193244B1D0D005F2D60 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AC318195244B24E3005F2D60 /* HScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		AC98C374244D05FC001ADFD9 /* CommentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputView.swift; sourceTree = "<group>"; };
+		AC98C376244D0C64001ADFD9 /* CommentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTextView.swift; sourceTree = "<group>"; };
+		AC98C379244D10D8001ADFD9 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		AC9CDD3D2445BB8900128528 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		AC9CDD402445C60000128528 /* ConverterPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterPropertyWrapper.swift; sourceTree = "<group>"; };
 		AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
@@ -493,6 +499,7 @@
 			children = (
 				AC1267262444A7D900CEAC73 /* Post.swift */,
 				AC1267282445163C00CEAC73 /* PostList.swift */,
+				AC98C379244D10D8001ADFD9 /* KeyboardResponder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -779,6 +786,8 @@
 				ACD085DA2447476700324D8E /* PostDetailView.swift */,
 				AC31818D244B145F005F2D60 /* HomeNavigationBar.swift */,
 				AC318195244B24E3005F2D60 /* HScrollViewController.swift */,
+				AC98C374244D05FC001ADFD9 /* CommentInputView.swift */,
+				AC98C376244D0C64001ADFD9 /* CommentTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1325,6 +1334,7 @@
 				AC1563D824442ED500644DFA /* CalculatorView.swift in Sources */,
 				AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */,
 				ACD1648D24470BF9000D861E /* Sample.swift in Sources */,
+				AC98C375244D05FC001ADFD9 /* CommentInputView.swift in Sources */,
 				AC1267272444A7D900CEAC73 /* Post.swift in Sources */,
 				ACE7655C244683FD00BC896F /* CalendarView.swift in Sources */,
 				AC9CDD412445C60000128528 /* ConverterPropertyWrapper.swift in Sources */,
@@ -1340,11 +1350,13 @@
 				AC9CDD452445F60800128528 /* PostListView.swift in Sources */,
 				ACD17BBB24418C5900B27242 /* SceneDelegate.swift in Sources */,
 				ACD1648F24470BF9000D861E /* FileHelper.swift in Sources */,
+				AC98C37A244D10D8001ADFD9 /* KeyboardResponder.swift in Sources */,
 				AC318194244B1D0D005F2D60 /* UserData.swift in Sources */,
 				ACD1649624470CB3000D861E /* Language.swift in Sources */,
 				AC318192244B1BBB005F2D60 /* HomeView.swift in Sources */,
 				AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */,
 				AC12671F2444A02C00CEAC73 /* CalculatorButtonRow.swift in Sources */,
+				AC98C377244D0C64001ADFD9 /* CommentTextView.swift in Sources */,
 				ACD164A224473FA5000D861E /* PostImageCell.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,

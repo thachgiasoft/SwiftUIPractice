@@ -16,12 +16,12 @@ struct Post : Codable, Identifiable {
     let vip : Bool
     let name : String
     let date : String
-    let isFollowed : Bool
+    var isFollowed : Bool
     let text : String
     let images : [String]
-    let commentCount : Int
-    let likeCount : Int
-    let isLiked : Bool
+    var commentCount : Int
+    var likeCount : Int
+    var isLiked : Bool
 
     enum CodingKeys: String, CodingKey {
             case id = "id"
