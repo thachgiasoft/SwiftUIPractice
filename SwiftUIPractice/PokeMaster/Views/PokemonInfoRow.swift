@@ -9,11 +9,9 @@
 import SwiftUI
 
 struct PokemonInfoRow: View {
-//    let model = PokemonViewModel.sample(id: 1)
     let model: PokemonViewModel
-    
-    @State
-    var expanded: Bool
+    let expanded: Bool
+
     var body: some View {
         VStack {
             HStack {
@@ -23,7 +21,7 @@ struct PokemonInfoRow: View {
                     .aspectRatio(contentMode: .fit)
                     .shadow(radius: 4)
                 Spacer()
-                VStack {
+                VStack(alignment: .trailing) {
                     Text(model.name)
                         .font(.title)
                         .fontWeight(.black)
@@ -32,21 +30,22 @@ struct PokemonInfoRow: View {
                         .font(.subheadline)
                         .foregroundColor(.white)
                 }
-            }.padding(.top,12)
+            }
+            .padding(.top, 12)
             Spacer()
-            HStack(spacing: expanded ? 20 : -30){
+            HStack(spacing: expanded ? 20 : -30) {
                 Spacer()
                 Button(action: {}) {
                     Image(systemName: "star")
-                    .modifier(ToolButtonModifier())
+                        .modifier(ToolButtonModifier())
                 }
                 Button(action: {}) {
                     Image(systemName: "chart.bar")
-                    .modifier(ToolButtonModifier())
+                        .modifier(ToolButtonModifier())
                 }
                 Button(action: {}) {
                     Image(systemName: "info.circle")
-                    .modifier(ToolButtonModifier())
+                        .modifier(ToolButtonModifier())
                 }
             }
             .padding(.bottom, 12)
@@ -54,19 +53,29 @@ struct PokemonInfoRow: View {
             .frame(maxHeight: expanded ? .infinity : 0)
         }
         .frame(height: expanded ? 120 : 80)
-               .padding(.leading, 23)
-               .padding(.trailing,15)
-               .background(
-                   ZStack{
-                       RoundedRectangle(cornerRadius: 20)
-                           .stroke(model.color, style: StrokeStyle(lineWidth: 4))
-                       RoundedRectangle(cornerRadius: 20)
-                       .fill(
-                           LinearGradient(gradient: Gradient(colors: [.white,model.color]), startPoint: .leading, endPoint: .trailing)
-                       )
-                   }
-               )
-               .padding(.horizontal)
+        .padding(.leading, 23)
+        .padding(.trailing, 15)
+        .background(
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(model.color, style: StrokeStyle(lineWidth: 4))
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.white, model.color]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+            }
+        )
+        .padding(.horizontal)
+        .animation(
+            .spring(
+                response: 0.55,
+                dampingFraction: 0.425,
+                blendDuration: 0)
+        )
     }
 }
 
