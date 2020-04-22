@@ -79,7 +79,16 @@ struct HomeNavigationBar: View {
                     .padding(.top, 5)
                     .foregroundColor(.orange)
             }
-        }.frame(width: UIScreen.main.bounds.width)
+        }
+        .frame(width: UIScreen.main.bounds.width)
+        .simultaneousGesture(
+            TapGesture().onEnded({
+                print("simultaneousGesture")
+            })
+        )
+//        .onTapGesture {
+//            print("onTapGesture")
+//        }
     }
 }
 

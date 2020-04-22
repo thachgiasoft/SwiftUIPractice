@@ -954,6 +954,34 @@ view modifier分为两种：
    .saturation(0)
    ```
 
+6. 同时支持多个手势使用simultaneousGesture
+
+   ```swift
+   HStack (alignment: .top, spacing: 0){
+         Button(action: {
+             print("Click add button")
+             self.swichHomeBlackOrLight.toggle()
+         }) {
+             Image(systemName: "plus.circle.fill")
+                 .resizable()
+                 .scaledToFit()
+                 .frame(width: kButtonHeight, height: kButtonHeight)
+                 .padding(.horizontal, 15)
+                 .padding(.top, 5)
+                 .foregroundColor(.orange)
+         }
+     }
+     .frame(width: UIScreen.main.bounds.width)
+     .simultaneousGesture(
+         TapGesture().onEnded({
+             print("simultaneousGesture")
+         })
+     )
+   //.onTapGesture {
+   //	print("onTapGesture")
+   //}
+   ```
+
    
 
 # 参考
