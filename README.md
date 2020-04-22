@@ -944,7 +944,17 @@ view modifier分为两种：
 
 4. type lookup List
 
+5. 设置view饱和度saturation为0实现黑白效果
 
+   ```swift
+   NavigationView{
+       ...
+   }
+   .navigationViewStyle(StackNavigationViewStyle())
+   .saturation(0)
+   ```
+
+   
 
 # 参考
 

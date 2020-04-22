@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var leftPercent: CGFloat = 0 // 0 for left, 1 for right
+    @State private var switchHomeDartOrLight = true
 
     init() {
         UITableView.appearance().separatorStyle = .none
@@ -31,10 +32,12 @@ struct HomeView: View {
                 
             }
             .edgesIgnoringSafeArea(.bottom)
-            .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent))
+            .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent, swichHomeBlackOrLight: $switchHomeDartOrLight).saturation(self.switchHomeDartOrLight ? 1 : 0))
             .navigationBarTitle("首页", displayMode: .inline)
+            .saturation(self.switchHomeDartOrLight ? 1 : 0)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+//        .saturation(0)
     }
 }
 

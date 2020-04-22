@@ -13,6 +13,7 @@ private let kButtonHeight: CGFloat = 24
 
 struct HomeNavigationBar: View {
     @Binding var leftPercent: CGFloat // 0 for left, 1 for right
+    @Binding var swichHomeBlackOrLight: Bool
 
     var body: some View {
         HStack (alignment: .top, spacing: 0){
@@ -68,6 +69,7 @@ struct HomeNavigationBar: View {
             
             Button(action: {
                 print("Click add button")
+                self.swichHomeBlackOrLight.toggle()
             }) {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
@@ -83,6 +85,6 @@ struct HomeNavigationBar: View {
 
 struct HomeNavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        HomeNavigationBar(leftPercent: .constant(0))
+        HomeNavigationBar(leftPercent: .constant(0), swichHomeBlackOrLight: .constant(true))
     }
 }
