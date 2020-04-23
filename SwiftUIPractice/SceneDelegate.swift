@@ -24,7 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let contentView = CalculatorView().environmentObject(CalculatorModel())
 //        let contentView = HomeView().environmentObject(UserData())
-        let contentView = MainTab()
+//        let contentView = MainTab()
+        let contentView = TestNetwork()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

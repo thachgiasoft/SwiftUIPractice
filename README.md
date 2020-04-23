@@ -668,6 +668,181 @@ final public class AnyCancellable : Cancellable, Hashable {
 
 # SwiftUI
 
+## 自定义绘制和动画
+
+### Path和Shape
+
+```swift
+import SwiftUI
+
+struct TriangleArrow: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { (path) in
+            path.move(to: .zero)
+            path.addArc(
+                center: CGPoint(x: -rect.width / 5, y: rect.height / 2), radius: rect.width / 2,
+                    startAngle: .degrees(-45),
+                    endAngle: .degrees(45),
+                    clockwise: false
+                )
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height / 2))
+            path.closeSubpath()
+        }
+    }
+}
+```
+
+### **Geometry Reader** 
+
+有时候，我们会想要在 View 里进行一些更精细的尺寸及布局计算，这需要获取一些 布局的数值信息:比如当前 View 可以使用的 height 或者 width 是多少，需不需要 考虑 iPhone X 系列的安全区域 (safe area) 等。SwiftUI 中，我们可以通过 GeometryReader 来读取 parent View 提供的这些信息。和 SwiftUI 里大部分类型一 样，GeometryReader 本身也是一个 View，它的初始化方法需要传入一个闭包，这 个闭包也是一个 ViewBuilder，并被用来构建被包装的 View。和其他常见 ViewBuilder 不同，这个闭包将提供一个 GeometryProxy 结构体 。GeometryProxy 中包括了 SwiftUI 中父 View 层级向当前 View 提议的布局信息，它 会为 Content View 提供一个上下文 。
+
+```swift
+/// Acts as a proxy for access to the size and coordinate space (for
+/// anchor resolution) of the container view.
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+public struct GeometryProxy {
+
+    /// The size of the container view.
+    public var size: CGSize { get }
+
+    /// Resolves the value of `anchor` to the container view.
+    public subscript<T>(anchor: Anchor<T>) -> T { get }
+
+    /// The safe area inset of the container view.
+    public var safeAreaInsets: EdgeInsets { get }
+
+    /// The container view's bounds rectangle converted to a defined
+    /// coordinate space.
+    public func frame(in coordinateSpace: CoordinateSpace) -> CGRect
+}
+```
+
+例子：
+
+```swift
+GeometryReader { geometry in
+    RoundedRectangle(cornerRadius: 2)
+       .foregroundColor(.orange)
+    	 .frame(width: 30, height: 4)
+       .offset(x: geometry.size.width * (self.leftPercent - 0.5) + kLabelWidth * (0.5 - self.leftPercent))
+}
+.frame(height: 6)
+```
+
+### **Animatable Data** 
+
+SwiftUI 中 Shape 非常强大，对 Shape 按照路径制作动画也很简单。如果你有注意， 会发现在 Shape 协议定义已经规定了 Shape 是满足 Animatable的。
+
+基本在事实上，它只要求你定义一个可以读取和设置的 animatableData，而这个值 需要是一个可以支持加减的矢量值 VectorArithmetic。在 SwiftUI 中，像是 CGFloat，Double 等都是满足 VectorArithmetic 要求的。除此之外，如果提供一对 满足 VectorArithmetic 的类型，将它们组合起来生成的 AnimatablePair 也满足 VectorArithmetic，这让我们可以同时为多个值定义动画。 
+
+SwiftUI 为包括 CGPoint、CGSize 和 Angle 在类的很多基本类型实现了 Animatable。这也是为什么我们能通过改变某个 View 上或者它的 modifier 上的对 应值来进行动画的原因。不过对于一般的 Shape 来说，它所默认提供的animatableData 没有做什么特殊操作。这其实很合理，像是 CGPoint、CGSize 和 Angle 这些类型，我们给定初始值和最终值后，总是可以通过插值的方式在这两个值 之间进行过渡，也就是动画。但是为一般性的 Shape 定义这类过渡是不可能的。所 以想要实现 Shape 的动画，我们需要自己定义合适的 animatableData。 
+
+## 布局和对齐
+
+### 布局优先级-layoutPriority
+
+### 强制固定尺寸- fixedSize()
+
+```swift
+import SwiftUI
+
+struct AlignmentGuideFixSzie: View {
+    var body: some View {
+        HStack {
+            VStack(alignment: .trailing) {
+                Text("Username")
+                Text("Email")
+                Text("Phone")
+            }
+            .font(.system(size: 35, weight: .bold))
+            
+            VStack(alignment: .leading) {
+                Text("zhuli").frame(maxHeight: .infinity)
+                Text("zhuli1228@163.com").frame(maxHeight: .infinity)
+                Text("15620418888").frame(maxHeight: .infinity)
+            }
+            .font(.system(size: 25))
+        }
+        .fixedSize()
+    }
+}
+```
+
+### **Frame** 
+
+
+
+### Aligment Guide
+
+容器有alignment参数规定子View默认对齐方式，子View的alignmentGuide与容器的alignment参数一致才起作用。跨容器对齐需要自定义alignment。
+
+用View与基准线、偏移量来表示。
+
+1. alignmentGuide参数与容器Aligment参数相同才起作用。
+
+2. computeValue闭包返回值类型CGFloat表示View与基准线的偏移量。
+
+3. 跨容器对齐需要自定义Alignment：添加alignmentGuide没有效果，Text的alignmentGuide参数与VStack的alignmentGuide参数相同，但中间隔着HStack系统自带的alignmentGuide，导致跨容器失效。
+
+   ```
+   import SwiftUI
+   
+   struct CustomHorizontalAlignment: AlignmentID {
+       static func defaultValue(in context: ViewDimensions) -> CGFloat {
+           context[.leading]
+       }
+   }
+   
+   extension HorizontalAlignment{
+       static let customLeading = HorizontalAlignment(CustomHorizontalAlignment.self)
+   }
+   
+   struct AlignmentGuide: View {
+       var body: some View {
+           VStack(alignment: .customLeading) {
+               HStack {
+                   Text("Username").titleStyle()
+                   Text("zhuli").contentStyle()
+   //                    .alignmentGuide(.leading) { (viewDimensions) -> CGFloat in
+   //                        viewDimensions[.leading]
+   //                }
+                   //添加alignmentGuide没有效果，Text的alignmentGuide参数与VStack的alignmentGuide参数相同，但中间隔着HStack系统自带的alignmentGuide，导致跨容器失效
+                   //跨容器对齐需要自定义Alignment
+                   //移动到扩展里
+   //                    .alignmentGuide(.customLeading) { $0[.leading] }
+                   //右侧文字左对齐，共享同一条基线
+               }
+               HStack {
+                   Text("Email").titleStyle()
+                   Text("zhuli1228@163.com").contentStyle()
+                   //移动到扩展里
+   //                .alignmentGuide(.customLeading) { $0[.leading] }
+               }
+               HStack {
+                   Text("Phone").titleStyle()
+                   Text("15620418888").contentStyle()
+                   //移动到扩展里
+   //                .alignmentGuide(.customLeading) { $0[.leading] }
+               }
+           }
+       }
+   }
+   
+   extension Text{
+       func titleStyle() -> Self {
+           self.font(.system(size: 35, weight: .bold))
+       }
+       
+       func contentStyle() -> some View {
+           self.font(.system(size: 25))
+           .alignmentGuide(.customLeading) { $0[.leading] }
+       }
+   }
+   ```
+
+   
+
 ## 数据状态和绑定
 
 根据适用范围和存储 状态的复杂度的不同，需要选取合适的方案。@State 和 @Binding 提供 View 内部 的状态存储，它们应该是被标记为 private 的简单值类型，仅在内部使用。 ObservableObject 和 @ObservedObject 则针对跨越 View 层级的状态共享，它可以处理更复杂的数据类型，其引用类型的特点，也让我们需要在数据变化时通过某种 手段向外发送通知 (比如手动调用 objectWillChange.send() 或者使用 @Published)， 来触发界面刷新。对于 “跳跃式” 跨越多个 View 层级的状态，@EnvironmentObject 能让我们更方便地使用 ObservableObject，以达到简化代码的目的。 

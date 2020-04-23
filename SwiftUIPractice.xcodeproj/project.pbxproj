@@ -33,6 +33,11 @@
 		AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */; };
 		AC9CDD452445F60800128528 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD442445F60800128528 /* PostListView.swift */; };
 		AC9CDD4724465CF300128528 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDD4624465CF300128528 /* CalculatorModel.swift */; };
+		ACB18111245078E6007D2754 /* TestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB18110245078E6007D2754 /* TestNetwork.swift */; };
+		ACB1811424510993007D2754 /* AlignmentGuideFixedSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1811324510993007D2754 /* AlignmentGuideFixedSize.swift */; };
+		ACB1811624510CF9007D2754 /* AlignmentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1811524510CF9007D2754 /* AlignmentGuide.swift */; };
+		ACB1811824511928007D2754 /* AnimationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1811724511928007D2754 /* AnimationTest.swift */; };
+		ACB1811A24513439007D2754 /* TriangleArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1811924513439007D2754 /* TriangleArrow.swift */; };
 		ACB5D8C6244D3F540025A0A4 /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5D8C5244D3F540025A0A4 /* PokemonList.swift */; };
 		ACBA6A24244668CC0029A0DD /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA6A23244668CC0029A0DD /* HistoryView.swift */; };
 		ACD085DB2447476700324D8E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD085DA2447476700324D8E /* PostDetailView.swift */; };
@@ -273,6 +278,11 @@
 		AC9CDD422445F3FF00128528 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
 		AC9CDD442445F60800128528 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		AC9CDD4624465CF300128528 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		ACB18110245078E6007D2754 /* TestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetwork.swift; sourceTree = "<group>"; };
+		ACB1811324510993007D2754 /* AlignmentGuideFixedSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuideFixedSize.swift; sourceTree = "<group>"; };
+		ACB1811524510CF9007D2754 /* AlignmentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuide.swift; sourceTree = "<group>"; };
+		ACB1811724511928007D2754 /* AnimationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTest.swift; sourceTree = "<group>"; };
+		ACB1811924513439007D2754 /* TriangleArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleArrow.swift; sourceTree = "<group>"; };
 		ACB5D8C5244D3F540025A0A4 /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
 		ACBA6A23244668CC0029A0DD /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		ACD085DA2447476700324D8E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
@@ -597,6 +607,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		ACB18112245108F6007D2754 /* AlignmentGuide */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1811324510993007D2754 /* AlignmentGuideFixedSize.swift */,
+				ACB1811524510CF9007D2754 /* AlignmentGuide.swift */,
+				ACB1811724511928007D2754 /* AnimationTest.swift */,
+				ACB1811924513439007D2754 /* TriangleArrow.swift */,
+			);
+			path = AlignmentGuide;
+			sourceTree = "<group>";
+		};
 		ACD1640524470B16000D861E /* PokeMaster */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +843,7 @@
 		ACD17BE82441903F00B27242 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACB18112245108F6007D2754 /* AlignmentGuide */,
 				AC318191244B1BBB005F2D60 /* HomeView.swift */,
 				AC9CDD442445F60800128528 /* PostListView.swift */,
 				ACD17BE92441905B00B27242 /* PostCell.swift */,
@@ -833,6 +855,7 @@
 				AC318195244B24E3005F2D60 /* HScrollViewController.swift */,
 				AC98C374244D05FC001ADFD9 /* CommentInputView.swift */,
 				AC98C376244D0C64001ADFD9 /* CommentTextView.swift */,
+				ACB18110245078E6007D2754 /* TestNetwork.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1425,6 +1448,7 @@
 				ACF96F33244EB6E10073450D /* SettingRootView.swift in Sources */,
 				ACD1649524470CB3000D861E /* Ability.swift in Sources */,
 				ACD17BB924418C5900B27242 /* AppDelegate.swift in Sources */,
+				ACB18111245078E6007D2754 /* TestNetwork.swift in Sources */,
 				AC1F592C2442CC4E00CE301E /* OC2Swift.swift in Sources */,
 				AC1563D824442ED500644DFA /* CalculatorView.swift in Sources */,
 				AC1267212444A05000CEAC73 /* CalculatorButton.swift in Sources */,
@@ -1444,6 +1468,7 @@
 				ACF96F50244EBFA60073450D /* AppAction.swift in Sources */,
 				AC9CDD432445F3FF00128528 /* PostCellToolbarButton.swift in Sources */,
 				AC9CDD3E2445BB8900128528 /* CalculatorBrain.swift in Sources */,
+				ACB1811624510CF9007D2754 /* AlignmentGuide.swift in Sources */,
 				ACF96F3A244EBB080073450D /* PokemonInfoPanelHeader.swift in Sources */,
 				AC9CDD452445F60800128528 /* PostListView.swift in Sources */,
 				AC350DAC244E8BF300A077DF /* SettingView.swift in Sources */,
@@ -1465,14 +1490,17 @@
 				ACD164A224473FA5000D861E /* PostImageCell.swift in Sources */,
 				ACF1406A2441A81400643A57 /* R.generated.swift in Sources */,
 				ACD17BBD24418C5900B27242 /* ContentView.swift in Sources */,
+				ACB1811824511928007D2754 /* AnimationTest.swift in Sources */,
 				ACB5D8C6244D3F540025A0A4 /* PokemonList.swift in Sources */,
 				ACD17BEA2441905B00B27242 /* PostCell.swift in Sources */,
+				ACB1811A24513439007D2754 /* TriangleArrow.swift in Sources */,
 				ACF96F4B244EBEA30073450D /* LoginRequest.swift in Sources */,
 				ACD1648E24470BF9000D861E /* Helpers.swift in Sources */,
 				ACF141132441AC8800643A57 /* PostVipBadge.swift in Sources */,
 				ACD1649A24470CDF000D861E /* PokemonViewModel.swift in Sources */,
 				ACD1649F2447108A000D861E /* ToolButtonModifier.swift in Sources */,
 				AC318196244B24E3005F2D60 /* HScrollViewController.swift in Sources */,
+				ACB1811424510993007D2754 /* AlignmentGuideFixedSize.swift in Sources */,
 				AC12671D2444762E00CEAC73 /* CalculatorButtonItem.swift in Sources */,
 				ACF96F40244EBB9E0073450D /* BlurView.swift in Sources */,
 				ACF96F4E244EBF860073450D /* AppState.swift in Sources */,
